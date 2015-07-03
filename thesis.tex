@@ -12,13 +12,14 @@
 \usepackage[]{tocbibind}
 \usepackage[titletoc]{appendix}
 \usepackage[hidelinks]{hyperref}
+\usepackage{indentfirst}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% trang tri %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\oddsidemargin}{0in}
 \setlength{\textwidth}{6.in}
 \setlength{\topmargin}{-0.5in}
 \setlength{\textheight}{9.25in}
 \renewcommand{\baselinestretch}{1.5}
-\usepackage{color, fancyhdr, graphicx, wrapfig}
+\usepackage{multicol, color, fancyhdr, graphicx, wrapfig}
 \usepackage{epstopdf}
 
 \pagenumbering{roman}\pagestyle{plain}
@@ -32,6 +33,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Figures and Table %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{afterpage, caption, subcaption}
+\usepackage{tikz} %Thư viện shape
+\usetikzlibrary{shapes.geometric, arrows,positioning} % Flow chart
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Tu dien viet tat %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -41,6 +44,26 @@
 \newacronym{ebov}{EBOV}{virus Ebola}
 \newacronym{zebov}{ZEBOV}{Zaire Ebola}
 \newacronym{evd}{EVD}{Bệnh Ebola - Ebola Virus Disease -}
+\newglossaryentry{ligand}
+{
+name={phối tử},
+description={ligand là một (hoặc một nhóm) phân tử có khả năng gắn vào một nhóm phân tử khác để tạo nên phức hợp với chức năng riêng biệt.}}
+\newglossaryentry{receptor}
+{
+name={thụ thể},
+description={receptor là phân tử nằm ở màng tế bào có chức năng thu nhận tín hiệu hóa học cho tế bào đó.}}
+\newglossaryentry{R312A}
+{
+name={R312A},
+description={Đột biến amino acid Arginine ở vị trí thứ 312 thành Alanine.}}
+\newglossaryentry{K339A}
+{
+name={K339A},
+description={Đột biến amino acid Lysine ở vị trí thứ 339 thành Alanine.}}
+\newglossaryentry{K282A}
+{
+name={K282A},
+description={Đột biến amino acid Lysine ở vị trí thứ 282 thành Alanine.}}
 \newacronym{ehf}{EHF}{Sốt xuất huyết Ebola - Ebola Hemmohaegic Fever -}
 \newacronym{md}{MD}{phương pháp động học phân tử - Molecular dynamics -}
 \newacronym{smd}{SMD}{Steered Molecular Dynamcs}
@@ -54,14 +77,20 @@
 name={IFN},
 description={Interferon (IFN) là một nhóm các protein tự nhiên được sản xuất bởi các tế bào của hệ miễn dịch ở hầu hết các động vật nhằm chống lại các tác nhân ngoại lai như virus, vi khuẩn, kí sinh trùng và tế bào ung thư.\cite{DeAndrea2002}},
 %other options
-}\newacronym{np}{NP}{Nucleoprotein}
+}
+\newacronym{np}{NP}{Nucleoprotein}
 \newglossaryentry{rig-i}
 {
 name={RIG-I},
 description={retinoic acid-inducible gene 1 là một loại enzym có chức năng phát hiện chuỗi vật chất di truyền của các virus cúm A, virus Sendai, họ flavivirus (virus sốt xuất huyết, viêm não Nhật Bản,...). Tuy nhiên RIG-I không phát hiện được retrovirus hay virus có vật chất di truyền là DNA.\cite{Kato2008}},
 %other options
 }
-
+\newglossaryentry{residue}
+{
+name={đơn vị amino acid},
+description={mỗi amino acid tại vị trí cụ thể sẽ có một vai trò cụ thể, vì vậy cần xác định tên amino acid và số thứ tự của nó trong chuỗi protein.},
+%other options
+}
 
 
 
@@ -103,6 +132,22 @@ description={retinoic acid-inducible gene 1 là một loại enzym có chức n�
 \tableofcontents
 \clearpage
 
+%%%%%%%%%%%%%%%%%%%                      %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%     Loi cam on       %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                      %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{chapter}{\protect{}Lời cảm ơn}
+\chapter*{Lời cảm ơn}
+Đề tài hoàn thành được là nhờ sự hỗ trợ rất lớn từ gia đình, quý thầy, các anh chị và các bạn trong nhóm nghiên cứu.\\
+
+Con xin cảm ơn ba mẹ đã luôn tin tưởng con có thể học và theo đuổi nghiên cứu khoa học. Em xin cảm ơn chị gái đã luôn tin tưởng và giúp đỡ em. Xin cảm ơn em gái đã chăm sóc anh trong suốt thời gian làm việc căng thẳng.\\
+
+Em xin cảm ơn thầy Chương rất nhiều vì thầy đã luôn dành thời gian và kinh nghiệm để hỗ trợ em hết mình trong việc giải quyết các khó khăn. Em xin cảm ơn thầy Văn đã nỗ lực truyền đạt kiến thức cho tập thể lớp, đồng thời tạo cho em nếp suy nghĩ logic và kỹ năng tính toán cần có. Em xin cảm ơn thầy Tuyên đã luôn lắng nghe và hỗ trợ em cùng các bạn trong lớp. Em xin cảm ơn thầy Phong vì đã chia sẻ những ý kiến thiết thực về nhân cách sống. Em xin cảm ơn thầy Nhã đã tận tình hỗ trợ và tìm mọi cách để tạo điều kiện học tập tốt nhất cho sinh viên bộ môn.\\
+
+Em xin cảm ơn anh Nguyễn Quý Trường và anh Trần Phước Duy đã luôn dành thời gian giúp đỡ em về mặt kỹ thuật. Em xin cảm ơn anh Minh Trung, anh Minh Nhật, anh Anh Tuấn đã cung cấp cho em bản khoá luận, giúp em thừa kế kiến thức các anh đã bỏ công nghiên cứu.\\
+
+Xin cảm ơn các bạn lớp Vật lý lý thuyết khoá 2011. Các bạn đã luôn hỗ trợ lẫn nhau hết mình.
+
 \printglossaries
 \addcontentsline{toc}{chapter}{Từ điển chú giải}
 \clearpage
@@ -113,18 +158,17 @@ description={retinoic acid-inducible gene 1 là một loại enzym có chức n�
 
 
 
-\newpage
-\pagestyle{fancy}
-\setcounter{page}{1}
-\pagenumbering{arabic}
+%\newpage
+%\pagestyle{fancy}
+
 %%%%%%%%%%%%%%%%%%%     Loi mo dau       %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                      %%%%%%%%%%%%%%%%%%%%%%%%
-\setcounter{chapter}{-1}
-\chapter{Lời mở đầu}
-\hspace{20pt}
-	Đề tài tập trung vào việc phân tích tương tác của phân tử VP35 và \gls{dsrna} của virus Ebola (\gls{ebov}) nhằm đánh giá các amino acid có vai trò quan trọng trong tương tác giữa hai phân tử trên. Theo đó, kết quả của khóa luận kiểm tra những amino acid thứ 312 và 339 của VP35 đóng vai trò quan trọng trong tương tác VP35-dsRNA\cite{Leung2010}. Đồng thời tiên đoán đột biến amino acid thứ 282 từ Lysine thành Alanine (K282A) làm giảm khả năng liên kết giữa VP35 và \gls{dsrna}.
+\newpage
+\addcontentsline{toc}{chapter}{\protect{}Lời mở đầu}
+\chapter*{Lời mở đầu}
+	Đề tài tập trung vào việc phân tích tương tác của phân tử VP35 và \gls{dsrna} của virus Ebola (\gls{ebov}) nhằm đánh giá các amino acid có vai trò quan trọng trong tương tác giữa hai phân tử trên. Theo đó, kết quả của khóa luận kiểm tra những R312 và 339 của VP35 đóng vai trò quan trọng trong tương tác VP35-dsRNA\cite{Leung2010}. Đồng thời tiên đoán đột biến K282 từ Lysine thành Alanine (K282A) làm giảm khả năng liên kết giữa VP35 và \gls{dsrna}.
 	
-	Phương pháp được sử dụng là \gls{smd}. Mô hình phân tử nước được sử dụng là TIP-4P\cite{Horn2004} và \gls{amber}\cite{} trong quá trình mô phỏng động học.
+	Phương pháp được sử dụng là \gls{smd}. Mô hình phân tử nước được sử dụng là TIP-4P\cite{Horn2004} và \gls{amber}\cite{Hornak2006} trong quá trình mô phỏng động học.
 	
 	Đề tài gồm 4 chương:
 	\begin{itemize}
@@ -134,42 +178,45 @@ description={retinoic acid-inducible gene 1 là một loại enzym có chức n�
 	\item Chương 4: Các kết luận và hướng phát triển tiếp theo của đề tài.
 	\end{itemize}
 
-	Do thời gian thực hiện khóa luận không nhiều, kiến thức còn hạn chế nên khi làm đề tài không tránh khỏi những hạn chế và sai sót. Tác giả rất mong nhận được sự góp ý và những ý kiến phản biện của quý thầy cô và các bạn.
+	Do thời gian thực hiện khóa luận không nhiều, kiến thức còn hạn chế nên đề tài không tránh khỏi sai sót. Tác giả rất mong nhận được sự góp ý và những ý kiến phản biện của quý thầy cô và các bạn.
 	\textrm{Xin chân thành cảm ơn!}
  
-
-
-\newpage
-\pagestyle{fancy}
+ 
+ 
+ 
 %%%%%%%%%%%%%%%%%%%     Chuong 1       %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                    %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{fancy}
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \setcounter{chapter}{0}
 \chapter{Tổng quan}
-\hspace{18pt}
+
 \section{Bệnh do Virus Ebola}
-\hspace{18pt}
-	\gls{evd} hay \gls{ehf} là bệnh truyền nhiễm trên động vật có vú gây bởi \glsentryfull{ebov}. Bệnh được phát hiện lần đầu năm 1976 tại Trung Phi\cite{}. Tỉ lệ tử vong nếu không được chữa trị lên đến 90\% ở chủng \gls{zebov}\cite{}. Đây là bệnh có tốc độ bùng phát cao và khó kiểm soát do Ebola có thể lây truyền qua nhiều động vật là vật chủ trung gian, đồng thời lây truyền qua tiếp xúc với dịch tiết từ cơ thể người bệnh\cite{}.
+
+	\gls{evd} hay \gls{ehf} là bệnh truyền nhiễm trên động vật có vú gây bởi \glsentryfull{ebov}. Bệnh được phát hiện lần đầu năm 1976 tại Trung Phi\cite{Feldmann2003}. Tỉ lệ tử vong nếu không được chữa trị lên đến 90\% ở chủng \gls{zebov}. Đây là bệnh có tốc độ bùng phát cao và khó kiểm soát do Ebola có thể lây truyền qua nhiều động vật là vật chủ trung gian, đồng thời lây truyền qua tiếp xúc với dịch tiết từ cơ thể người bệnh\cite{Colebunders2000}.
 	
-	\gls{evd} đặc biệt nguy hiểm và có khả năng xuất hiện ở các nước có khí hậu nhiệt đới, cận nhiệt\cite{}. Đồng thời, \gls{evd} lây truyền qua dơi ăn trái cây và các động vật như tinh tinh, khỉ, heo\cite{Kuhn2010}, nên khả năng xuất hiện ở Việt Nam là rất cao. Trong nhiều thập kỷ, việc tìm hiểu về \gls{ebov} được quan tâm nhiều khi vũ khí sinh học trở nên phát triển\cite{}.
+	\gls{evd} đặc biệt nguy hiểm và có khả năng xuất hiện ở các nước có khí hậu nhiệt đới, cận nhiệt\cite{Ansari2014}. Đồng thời, \gls{evd} lây truyền qua dơi ăn trái cây và các động vật như tinh tinh, khỉ, heo\cite{Kuhn2010}, nên khả năng xuất hiện ở Việt Nam là rất cao. Trong nhiều thập kỷ, việc tìm hiểu về \gls{ebov} được quan tâm nhiều khi vũ khí sinh học trở nên phát triển\cite{Feldmann2003, Lee2009}.
 	
 \subsection{Các protein của \glsentrytext{ebov}}
-\hspace{18pt}
+
 	Cần biết rõ về các protein có trong \gls{ebov} để phác thảo được các phương án tấn công \gls{ebov} được nói đến ở mục tiếp theo.
-	\Gls{ebov} thuộc họ Filoviridae, bộ Mononegravirale\cite{Kuhn2010}, tức là \gls{ebov} thuộc họ virus có vật chất di truyền RNA gram âm và có ???????????????????? .\Gls{ebov} được cấu tạo bởi 7 loại protein với các chức năng khác nhau\cite{}.
+	\Gls{ebov} thuộc họ Filoviridae, bộ Mononegravirale, tức là \gls{ebov} thuộc họ virus có vật chất di truyền RNA gram âm và có hình sợi\cite{Kuhn2010}.\Gls{ebov} được cấu tạo bởi 7 loại protein với các chức năng khác nhau\cite{Huang2002}.
 	\begin{itemize}
-	\item \gls{gp} là protein nằm ở vỏ của virus, mang các thụ thể như các chìa khóa giúp \gls{ebov} đột nhập vào tế bào\cite{}.
-	\item VP40 là protein ma trận, giúp định hình cấu trúc cho \gls{ebov}\cite{}.
-	\item VP24 là protein có vai trò ngăn chặn các \gls{ifn} kích hoạt các gene mã hóa các protein mang tính báo động của cơ thể\cite{}.
+	\item \gls{gp} là protein nằm ở vỏ của virus, mang các thụ thể như các chìa khóa giúp \gls{ebov} đột nhập vào tế bào\cite{Johnson2006, Lee2009}.
+	\item VP40 là protein ma trận, giúp định hình cấu trúc cho \gls{ebov}\cite{Dessen2000, Noda2002}.
+	\item VP24 là protein có vai trò ngăn chặn các \gls{ifn} kích hoạt các gene mã hóa các protein mang tính báo động của cơ thể\cite{Reid2006}.
 	\item VP30 là protein có vai trò hỗ trợ phiên mã \gls{dsrna}\cite{Weik2002}
 	\item L protein và \gls{np}\cite{Feldmann2003,Dziubanska:be5269} có vai trò quan trọng trong quá trình phiên mã \gls{dsrna}, đồng thời \gls{np} giữ cho chuỗi đơn RNA của \gls{ebov} không bị tổn hại\cite{Dziubanska:be5269}
-	\item VP35 là phân tử có nhiều cấu trúc thực nghiệm và nắm giữ nhiều vai trò quan trọng trong quá trình phiên mã và vô hiệu cơ chế phát hiện RNA lạ của cơ thể người\cite{}
+	\item VP35 là phân tử có nhiều cấu trúc thực nghiệm và nắm giữ nhiều vai trò quan trọng trong quá trình phiên mã và vô hiệu cơ chế phát hiện RNA lạ của cơ thể người\cite{Muhlberger1999,Basler2000,Basler2003,Enterlein2006,Feng2007,Prins2009}.
 	\end{itemize}
 
 \section{Cơ chế hoạt động của EBOV}
 Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướng ngăn chặn \gls{ebov}
 \subsection{Quá trình xâm nhập và sao chép của EBOV}
-\hspace{18pt}
-		EBOV thâm nhập tế bào thành mạch máu và thực hiện quá trình phiên mã, dịch mã, tổng hợp vật chất\cite{}. Trong quá trình sao chép, protein VP35 sẽ bất hoạt phân tử \gls{rig-i} và vô hiệu hóa hệ thống miễn dịch. Sau khi nhân lên với số lượng lớn, EBOV sẽ giải phóng khỏi tế bào và xâm nhập các tế bào khác\cite{} (xem hình \ref{fig:viruscycle}).
+
+		EBOV thâm nhập tế bào thành mạch máu và thực hiện quá trình phiên mã, dịch mã, tổng hợp vật chất. Trong quá trình sao chép, protein VP35 sẽ bất hoạt phân tử \gls{rig-i} và vô hiệu hóa hệ thống miễn dịch. Sau khi nhân lên với số lượng lớn, EBOV sẽ giải phóng khỏi tế bào và xâm nhập các tế bào khác\cite{Colebunders2000} (xem hình \ref{fig:viruscycle}).
 		\begin{figure}[t]
 		\centering
 		\includegraphics[width=1.0\textwidth,natwidth=610,natheight=642]{Ebolavirus_cycle.png}
@@ -177,18 +224,18 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 		\label{fig:viruscycle}
 		\end{figure}
 \subsection{Quá trình hệ thống miễn dịch hoạt động}
-\hspace{18pt}
+
 		Phân tử \gls{rig-i} có vai trò phát hiện các dsRNA lạ và kích hoạt tế bào sản xuất \gls{ifn}$\alpha / \beta$\cite{Cardenas2006}. Sau khi tế bào bệnh bị phá vỡ do virus nhân lên với số lượng lớn và giải phóng ra ngoài, \gls{ifn}$\alpha / \beta$ cũng được giải phóng theo và bám vào thụ thể của các tế bào lân cận. Sự bám này là tín hiệu cho hệ thống miễn dịch hoạt động và phá hủy tất cả các tế bào có chứa các tác nhân lạ.\cite{DeAndrea2002}
-		\begin{figure}[h]
-		\centering
-		
-		\caption{}
-		\label{}
-		\end{figure}
+%		\begin{figure}[h]
+%		\centering
+%		
+%		\caption{}
+%		\label{}
+%		\end{figure}
 \subsection{VP35 vô hiệu hệ thống miễn dịch}
-\hspace{18pt}
+
 		VP35 bám vào dsRNA của EBOV và không cho \gls{rig-i} phát hiện dsRNA, do \gls{rig-i} phát hiện dsRNA bằng cách liên kết với dsRNA. Theo đó, không có tín hiệu kích hoạt tế bào sản xuất IFN$\alpha / \beta$ và hệ thống miễn dịch không được báo động khi \gls{ebov} phá vỡ thành tế bào và chui ra ngoài\cite{Hartman2004}.
-\section{Các phương án ngăn chặn EBOV}
+%\section{Các phương án ngăn chặn EBOV}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %+ Ket thuc Chuong 1.
@@ -201,66 +248,68 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 %%%%%%%%%%%%%%%%%%%                    %%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{chapter}{1}
 \chapter{Đối tượng và phương pháp nghiên cứu}
-\hspace{18pt}
+
 	Khóa luận tập trung nghiên cứu cấu hình 3L25 của phân tử VP35, sử dụng phương pháp \gls{smd} để đánh giá tương tác giữa VP35 và dsRNA
 \section{Cấu hình của VP35}
 	\subsection{Cấu hình 3L25}
-	\hspace{18pt}
+	
 		Gồm chuỗi \gls{dsrna} dài 8 đơn vị (8bps) liên kết với 4 phân tử VP35 (chuỗi A, B, C và D). Chuỗi A và B tạo liên kết, với chuỗi B liên kết với đầu chuỗi dsRNA và chuỗi A liên kết với dsRNA dọc theo chiều dài chuỗi. Tương tự với chuỗi C và D. Chuỗi A và C hình thành tương tác Van der Waals với dsRNA. Chuỗi B và D xuất hiện liên kết nhánh phụ trực tiếp với nhóm phosphodiester của dsRNA\cite{Leung2010} (Xem \ref{fig:vp35}).
-		\begin{figure}[h]
+		\clearpage
+		\begin{figure}[t!]
 		\centering
 		\includegraphics[width=0.7\textwidth,natwidth=610,natheight=642]{VP35.png}
 		\caption{4 đơn vị phân tử VP35 bám vào \gls{dsrna} được tô màu xanh dương, đỏ, cam, xanh lá cây.}
 		\label{fig:vp35}
 		\end{figure}
-		Tuy nhiên, để bắt đầu khảo sát cấu trúc 3L25, tôi chọn khảo sát cấu hình chỉ gồm chuỗi A và dsRNA (A-conf), chuỗi B và dsRNA (B-conf), chuỗi A, B và dsRNA (AB-conf).
-	\subsection{A-conf}
-	\hspace{18pt}
-		Gồm chuỗi A và dsRNA. A-conf giúp phân tích tương tác giữa VP35 và dsRNA dọc theo chuỗi (Xem \ref{fig:vp35a}).
-		
-	\subsection{B-conf}
-	\hspace{18pt}
-		Gồm chuỗi B và dsRNA. B-conf giúp phân tích tương tác tại đầu chuỗi dsRNA của VP35. Đây là phân tử VP35 tương tác chính với \gls{dsrna} và có vai trò quan trọng trong tương tác giữa hệ các phân tử VP35 và \gls{dsrna}. Xem hình \ref{fig:vp35b}
+		Tuy nhiên, để khảo sát cấu trúc 3L25, tôi chọn khảo sát cấu hình chỉ gồm chuỗi B và dsRNA (B-conf).
+%	\subsection{A-conf}
+%	
+%		Gồm chuỗi A và dsRNA. A-conf giúp phân tích tương tác giữa VP35 và dsRNA dọc theo chuỗi (Xem \ref{fig:vp35a}).
 
-	\subsection{AB-conf}
-	\hspace{18pt}
-		Gồm hai chuỗi A và B tương tác với dsRNA (Xem \ref{fig:vp35ab}).
+%	\subsection{AB-conf}
+%	
+%		Gồm hai chuỗi A và B tương tác với dsRNA (Xem \ref{fig:vp35ab}). đây là cấu trúc ]
 		\begin{figure}[p]
-%		\centering
-		\begin{subfigure}[h]{0.5\textwidth}
-		\includegraphics[width=0.9\linewidth,natwidth=610,natheight=642]{VP35_A.png}
-		\vspace{-40pt}
-		\caption{Chuỗi VP35 A bám vào \gls{dsrna} dài 8bps được tô màu xanh dương.}
-		\label{fig:vp35a}
-		\end{subfigure}
-		\begin{subfigure}[h]{0.5\textwidth}
+		\centering
+%		\begin{subfigure}[h]{0.5\textwidth}
+%		\includegraphics[width=0.9\linewidth,natwidth=610,natheight=642]{VP35_A.png}
+%		\vspace{-40pt}
+%		\caption{Chuỗi VP35 A bám vào \gls{dsrna} dài 8bps được tô màu xanh dương.}
+%		\label{fig:vp35a}
+%		\end{subfigure}
+		\begin{subfigure}[h]{0.45\textheight}
 		\includegraphics[width=0.9\linewidth,natwidth=610,natheight=642]{VP35_B.png}
-		\vspace{-40pt}
+		\vspace{-30pt}
 		\caption{Chuỗi VP35 B bám vào \gls{dsrna} dài 8bps được tô màu đỏ.}
 		\label{fig:vp35b}
 		\end{subfigure}
 		\\
-		\begin{subfigure}[h]{0.9\textwidth}
+		\begin{subfigure}[h]{0.4\textheight}
 		\centering
 		\includegraphics[width=1.0\linewidth,natwidth=610,natheight=642]{VP35_AB.png}
-		\vspace{-160pt}
+		\vspace{-30pt}
 		\caption{2 chuỗi VP35 A và B bám vào \gls{dsrna} dài 8bps được tô màu xanh dương và đỏ.}
 		\label{fig:vp35ab}
 		\end{subfigure}
 		\clearpage
 
-		\caption{Các cấu hình được khảo sát}
+		\caption{Cấu hình được khảo sát}
 		\end{figure}
+		
+	\subsection{B-conf}
+	
+		Gồm chuỗi B và dsRNA. B-conf giúp phân tích tương tác tại đầu chuỗi dsRNA của VP35. Đây là phân tử VP35 tương tác chính với \gls{dsrna} và có vai trò quan trọng trong tương tác giữa hệ các phân tử VP35 và \gls{dsrna}. Xem hình \ref{fig:vp35b}
+
 \newpage
 \section{Phương pháp Mô phỏng động học phân tử}
 Mô phỏng động lực học phân tử (Molecular Dynamics - MD) là một phương pháp quan trọng giúp tìm hiểu các tính chất vật lý của hệ phân tử sinh học.
 	\subsection{Ý tưởng chính}
-	\hspace{18pt}
+	
 	Khi khảo sát một hệ nhiều hạt, người ta sử dụng các quy luật thống kê do không thể tìm được lời giải giải tích cho mọi tính chất của hệ. Với điều kiện hệ nhiều hạt này tuân theo giả thiết ergodic, việc khảo sát hệ theo thời gian có thể cho ta bức tranh sơ bộ về không gian phase của hệ.
 	\Gls{md} cho biết quỹ đạo của từng nguyên tử trong hệ một cách cổ điển, tức là xem mỗi nguyên tử là mô hình một "hạt" tuân theo phương trình chuyển động Newton. Sau khi biết được quỹ đạo theo thời gian, các thông số như vận tốc, động năng, nhiệt độ,... sẽ được tính toán gián tiếp.
 %	\subsection{Tham số sử dụng}
 	\subsection{Thuật toán Verlet sử dụng trong mô phỏng}
-	\hspace{18pt}
+	
 		Trong quá trình giải phương trình chuyển động Newton bằng phương pháp số, có một thủ thuật nhằm tính đại lượng tọa độ của hệ hạt với bậc chặt cụt
 		Tích phân Verlet\cite{Verlet1967} là một phương pháp số được sử dụng trong phương trình chuyển động Newton. Nó thường dùng để tính quỹ đạo của hạt trong mô phỏng động học và đồ họa máy tính. Thuật toán được phát triển bởi Delambre (1791) và được Verlet sử dụng nhiều trong động học phân tử những năm 60. Nó cũng được dùng để tính toán quỹ đạo sao chổi Halley.
 			
@@ -278,54 +327,203 @@ Mô phỏng động lực học phân tử (Molecular Dynamics - MD) là một p
 		\label{verlet2}
 		\end{equation}
 		Từ phương trình \eqref{verlet2}, có thể thấy rằng tích phân Verlet đem lại bậc sai số cao hơn nhiều so với phương pháp Euler.
-	\subsection{V-rescale và Nosé-Hoover thermostat}
-	\hspace{18pt}
-		sdf
-	\subsection{}
-	\subsection{\glsentrytext{amber}}
-	\hspace{18pt}
-		Tuy có tên gọi là "trường lực" nhưng nó không phải là đại lượng có thứ nguyên của lực. Trường lực (force field - ff) chính là hàm thế năng tương tác giữa các phân tử trong hóa học và sinh học tính toán. Sử dụng gần đúng cổ điển, người ta thường bỏ qua các ảnh hưởng gây ra bởi chuyển động của electron và xét năng lượng của hệ nguyên tử như hàm của các "hạt". Có rất nhiều ff được xây dựng. Trường lực thường xuyên được sử dụng nhất được mang tên AMBER\cite{Duan2003,Cornell1995,Hornak2006}, GROMOS\cite{}, CHARMM\cite{}, OPLS\cite{}. Với mỗi trường lực được phát triển còn có nhiều phiên bản khác nhau với mỗi ưu điểm riêng.
-		Khóa luận đã sử dụng phiên bản \gls{amber} để mô phỏng tương tác giữa các phân tử vì đây là trường lực có rất nhiều ưu điểm trong việc mô tả hệ protein-RNA\cite{}. \Gls{amber} có đầy đủ tham số tương tác cho các nguyên tử trong phân tử RNA, protein, kể cả hydro không phân cực. Trong khi đó các trường lực united-atom xem các nguyên tử Hydro và Carbon trong mỗi methyl terminal và mỗi methylene bridge như một điểm tương tác duy nhất. Để mô phỏng thời gian dài, các ff thô (coarse-grained) được sử dụng.
+	\subsection{Thuật toán kiểm soát nhiệt độ}
+%	
+		Để có thể mô phỏng (i) hệ phân tử lớn trong (ii) thời gian dài sao cho kết quả mô phỏng phù hợp với thực nghiệm, người ta tìm các thuật toán để có thể kiểm soát các đại lượng nhiệt động như mong muốn. Cụ thể, người ta áp dụng mô hình Vi chính tắc, cùng các điều kiện ràng buộc tương ứng để mô phỏng hệ (số hạt, thể tích, năng lượng tổng của hệ không đổi theo thời gian). Nhưng mô hình Vi chính tắc này vẫn chưa đem lại những quan sát có được trong thực nghiệm, người ta sử dụng mô hinh Chính tắc để mô tả hệ với mong muốn nhận được những kết quả phù hợp với thực nghiệm hơn. Thuật toán đơn giản có thể kiểm soát nhiệt độ của hệ thông qua kiểm soát vận tốc của hạt trong hệ được gọi chung là V-rescale.\\
+		Có nhiều phương pháp khác nhau để kiểm soát nhiệt độ của hệ. Khóa luận chỉ sử dụng phương pháp Berendsen và Nosé-Hoover nên sẽ chỉ trình bày sơ lược hai phương pháp này.\\
+		Một cách tổng quát, kiểm soát nhiệt độ thông qua kiểm soát vận tốc hạt trong hệ dựa trên mối liên hệ giữa nhiệt độ và vận tốc hạt được trình bày trong phương trình \eqref{vT} sau:
+		\begin{equation}
+		\sum_{i=1}^{N} \dfrac{\vec{p}_{i}}{2m_{i}} = \dfrac{k_{b}T}{2}\left(3N-N_{c}\right)
+		\label{vT}
+		\end{equation}
+		với $3N - N_{c} = N_{df}$ là số bậc tự do.
+		Để thực hiện được việc điều chỉnh nhiệt độ về một giá trị cho trước thông qua điều chỉnh $\Delta T$, ta sử dụng tham số $\lambda$ như sau:
+		\begin{align}
+		\Delta T = & \dfrac{1}{2} \sum 2\dfrac{m_{i}\left(\lambda v_{i}\right)^{2}}{N_{df} k_{B}} - 2\dfrac{m_{i} v_{i}^{2}}{N_{df} k_{B}}\\
+		\Delta T = & \left(\lambda^{2} - 1\right) T\left(t\right)\\
+		\lambda = &  \sqrt{\dfrac{T_{0}}{T\left(t\right)}}
+		\end{align}
+		Chỉ việc nhân vận tốc hạt trong mỗi bước lặp với $lambda$ vừa tính được ở bước liền trước thì vận tốc của các hạt sẽ dần dần phân bố một cách tương ứng với nhiệt độ $T_{0}$
+		Việc kiểm soát nhiệt độ một cách chặt chẽ bởi tham số $\lambda$ khiến cho thăng giáng nhiệt bị bóp hẹp và cần thiết sử dụng các phương pháp hiệu chỉnh ở cấp độ cao hơn.
+		\subsubsection{Phương pháp Berendsen}
+		
+			Ta có thể hình dung sơ lược về phương pháp này như sau:
+			\begin{itemize}
+			\item Phương pháp Berendsen chủ yếu được dùng để đưa hệ về một nhiệt độ ổn định, nhưng hệ không có tính chất thăng giáng nhiệt của hệ Chính tắc.
+			\item Sau mỗi bước lặp, vận tốc của hệ thay đổi và làm thay đổi nhiệt độ của hệ một lượng $\Delta T$. Thuật toán sẽ giúp điều chỉnh độ thay đổi này sao cho nhiệt độ ổn định quanh giá trị $T_{0}$.
+			\item Băng cách hiệu chỉnh như trên, có thể thực hiện quá trình mô phỏng trong thời gian dài mà vẫn tránh được dịch chuyển mức năng lượng sinh ra bởi sai số của phép tính toán số.
+			\item Hệ mô phỏng có thể được chọn một cách tối giản để giảm thiểu tài nguyên tính toán, do sai số đã được giảm thiểu.
+			\end{itemize}
+			Thay vì tính tham số $\lambda$ một cách trực tiếp như trước, người ta tìm cách để nhiệt độ $T$ có thể thăng giáng quanh một giá trị với biên độ thăng giáng có thể đánh giá được qua tham số $\tau$ như sau:
+			\begin{equation}
+			\dfrac{dT\left(t\right)}{dt} = \dfrac{1}{\tau}\left(T_{0}-T\left(t\right)\right)
+			\label{exp-v-r}
+			\end{equation}
+			Ở đây, $tau$ được gọi là tham số cặp nhiệt độ (T-coupling). Gọi như vậy vì nó cho thấy tương tác giữa hệ và bể nhiệt trao đổi nhiệt với nhau nhanh hay không. Với cách kiểm soát nhiệt độ như vậy, nhiệt độ của hệ hội tụ theo hàm số mũ và thu được hệ số $\lambda$ cho vận tốc hạt như sau:
+			\begin{equation}
+			\lambda^{2} = 1 + \dfrac{\delta t}{\tau}\left[\dfrac{T_{0}}{T\left(t-\delta t\right)}-1\right]
+			\end{equation}
+			Hiệu chỉnh $tau$ một cách kỹ lưỡng sẽ cho phép nhiệt độ $T$ tiến đến giá trị $T_{0}$ cho trước với thăng giáng nhiệt thu được từ phương trình sau:
+			\begin{equation}
+			\Delta T = \dfrac{\delta t}{\tau}\left(T_{0}-T\left(t\right)\right)
+			\end{equation}
+			Với $t\rightarrow \infty$ thì hệ hạt có các tính chất của hệ Vi chính tắc, không có hiệu chỉnh Berensend tham gia vào quá trình mô phỏng. Nhưng với giá trị $\tau \sim \delta t$ thì hệ số $\lambda$ trở về với giá trị như đã trình bày ở phần tổng quát của V-rescale.\\
+			Trong chương trình mô phỏng mà đề tài sử dụng, $tau$ được hiệu chỉnh về giá trị $0.4\delta t$.\\
+			Từ phương trình \eqref{exp-v-r} có thể thấy rằng nhiệt độ $T$ của hệ tiến về giá trị $T_{0}$ theo hàm mũ. Như vậy, hệ sẽ tiến về mô hình Vi chính tắc, thay vì tiến về mô hình Chính tắc mà ta mong muốn.
+		\subsubsection{Phương pháp Nosé-Hoover}
+		
+			Để khắc phục các nhược điểm của phương pháp Berendsen, Nosé phát triển một phương pháp khác nhằm mở rộng hệ bằng cách xem bể nhiệt như một phần bổ sung của hệ hạt đang xét, nhờ thêm vào biến phụ $\bar{s}$, cũng như giả khối lượng $Q$ ($>>0$) và vận tốc $\dot{\bar{s}}$. Cụ thể, biến thời gian được hiệu chỉnh lại như sau:
+			\begin{equation}
+			d\bar{t}=\bar{s} dt
+			\end{equation}
+			Các biến tọa độ không gian của hệ hạt vẫn không bị thay đổi, theo đó:
+			\begin{align}
+			\bar{\vec{r}} = & \vec{r}\\
+			\bar{\dot{\vec{r}}} = & \bar{s}^{-1}\dot{\vec{r}}\\
+			\bar{s} = & s^{-1}\\
+			\dot{\bar{s}} = & \bar{s}^{-1}\dot{\bar{s}}
+			\end{align}
+			Sử dụng bốn hệ thức biến đổi tọa độ trên, ta có thể xây dựng được Lagrangian:
+			\begin{equation}
+			\mathcal{L}=\sum_{i} \dfrac{m_{i}}{2}\bar{s}^{2}\dot{\bar{\vec{r}}}_{i} - U\left(\bar{r}\right) + \dfrac{1}{2}Q\dot{\bar{s}}^{2} - gk_{B}T_{0}\ln \bar{s}
+			\label{lagrangian}
+			\end{equation}
+			với $g=N_{df}$.
+			Quan sát phương trình \eqref{lagrangian} dễ dàng thấy được số hạng động năng bây giờ gồm tổng động năng có được do chuyển động của hạt và động năng sinh bởi biến phụ $\dot{\bar{s}}$ và thế năng gồm thế năng thực của hệ hạt cộng với thế năng phát sinh bởi biến phụ $\bar{s}$. Theo đó, năng lượng thực của hệ hạt (gồm động năng và thế năng của hệ hạt) không còn là hằng số mà thay đổi theo $\bar{s}$. Điều đó có nghĩa là sử dụng Lagrangian vừa xây dựng được, ta có thể mô tả hệ hạt trao đổi nhiệt với bể nhiệt.\\
+			Phương trình chuyển động có dạng:
+			\begin{align}
+			\ddot{\bar{\vec{r}}}_{i} = & \dfrac{\bar{\vec{F}}_{i}}{m_{i}\bar{s}^{2}} - \dfrac{2\dot{\bar{s}}\dot{\bar{\vec{r}}}_{i}}{\bar{s}},\\
+%			\label{r_bar}
+			\ddot{\bar{s}} = & \dfrac{1}{Q\bar{s}}\left( \sum_{i}m_{i}\bar{s}^{2}\dot{\bar{\vec{r}}}_{i} - gk_{B}T_{0} \right)
+			\label{s_bar}
+			\end{align}
+			Đây là phương trình chuyển động của hệ hạt trong hệ tọa độ mở rộng $\left( \bar{r},\bar{p},\bar{t} \right)$. Tuy nhiên, \eqref{s_bar} là phương trình đạo hàm bậc 2 theo thời gian và $\bar{s}$ có xu hướng dao động tuần hoàn, nên thăng giáng nhiệt cũng mang tính chu kỳ.\\
+			Nosé và Hoover đã tìm cách biến đổi lại phương trình \eqref{r_bar} trở về phương trình sử dụng hệ tọa độ thực, và phương trình \eqref{s_bar} trở về phương trình đạo hàm bậc nhất theo thời gian, sử dụng các hệ thức biến đổi sau:
+			\begin{align}
+			s = \bar{s},\quad \dot{s} = \bar{s}\dot{\bar{s}},\quad \ddot{s} = \bar{s}^2\ddot{\bar{s}}+\bar{s}\dot{\bar{s}}^2,\\
+			\vec{r} = \bar{\vec{r}},\quad \dot{\vec{r}}=\bar{s}\dot{\vec{r}},\quad \ddot{r} = \bar{s}^{2}\ddot{\bar{\vec{r}}} + \bar{s}\dot{\bar{\vec{r}}}^{2}
+			\end{align}
+			và thay
+			\begin{equation}
+			\gamma = \dfrac{\dot{s}}{s}
+			\end{equation}
+			phương trình chuyển động \eqref{s_bar} được viết lại thành:
+			\begin{align}
+			\ddot{\vec{r}}_{i}= & \dfrac{\vec{F}_{i}}{m_{i}} - \gamma \vec{r}_{i},\\
+			\dot{\gamma}= & \dfrac{-k_{B}N_{df}}{Q}T\left(t\right) \left( \dfrac{T_{0}}{T\left(t\right)}-1 \right)
+			\label{gamma}
+			\end{align}
+			Đặt $\tau_{relax} = \dfrac{Q}{N_{df}k_{B}T_{0}}$ là thời gian phục hồi đặc trưng cho chu kỳ dao động nhỏ của biến $\bar{s}$ thì phương trình \eqref{gamma} có thể viết lại:
+			\begin{equation}
+			\dot{\gamma} = -\dfrac{1}{\tau_{relax}}\left( \dfrac{T_{0}}{T\left(t\right)}-1 \right)
+			\end{equation}
+			Trong phương trình \eqref{gamma}, khối lượng ảo $Q$ cần được chọn một cách phù hợp. Hệ trở thành hệ Vi chính tắc nếu cho $Q\rightarrow \infty$. Nếu chọn Q quá lớn, sẽ phải mô phỏng trong thời gian dài mới đạt được phân bố Chính tắc. Ngược lại, chọn $Q$ quá nhỏ sẽ dẫn đến tần số nhiễu loạn của hệ thực là lớn, và ta không quan sát được sự trao đổi động năng giữa bể nhiệt và hệ phân tử đang quan sát.
+			Trong thực tế, hệ phân tử mô phỏng thường có khối lượng khác nhau tùy theo nguyên tố. Để chọn được $Q$, cần thiết chọn giá trị $Q$ với mỗi nhóm phân tử khác nhau để thời gian mô phỏng là tối thiểu mà hệ vẫn đạt được phân bố chính tắc.
+%	\subsection{}
+	\subsection{Trường lực}
+	
+		\Gls{amber} là tên gọi của trường lực đặc trưng cho tương tác giữa các nguyên tử trong hệ. Tuy có tên gọi là "trường lực" nhưng nó không phải là đại lượng có thứ nguyên của lực. Trường lực (force field - ff) chính là hàm thế năng tương tác giữa các phân tử trong hóa học và sinh học tính toán. Sử dụng gần đúng cổ điển, người ta thường bỏ qua các ảnh hưởng gây ra bởi chuyển động của electron và xét năng lượng của hệ nguyên tử như hàm của các "hạt". Có rất nhiều ff được xây dựng. Trường lực thường xuyên được sử dụng nhất được mang tên AMBER\cite{Duan2003,Cornell1995,Hornak2006,Ponder2003,Mackerell2004}, GROMOS\cite{Soares2005,Oostenbrink2004,Schmid2011,Schuler2001,Cornell1995}, CHARMM\cite{Mackerell2004,Cornell1995}, OPLS\cite{Mackerell2004,Cornell1995}. Với mỗi trường lực được phát triển còn có nhiều phiên bản khác nhau với mỗi ưu điểm riêng.
+		Khóa luận đã sử dụng phiên bản \gls{amber} để mô phỏng tương tác giữa các phân tử vì đây là trường lực có rất nhiều ưu điểm trong việc mô tả hệ protein-RNA\cite{Hornak2006}. \Gls{amber} có đầy đủ tham số tương tác cho các nguyên tử trong phân tử RNA, protein, kể cả hydro không phân cực. Trong khi đó các trường lực united-atom xem các nguyên tử Hydro và Carbon trong mỗi methyl terminal và mỗi methylene bridge như một điểm tương tác duy nhất. Để mô phỏng thời gian dài, các trường lực thô (coarse-grained) được sử dụng.\\
 		\Gls{amber} được mô tả bởi một hàm thế như sau:
-%		\begin{equation}
+
 		\begin{align}
 		V(r^{N}) =& \sum_{ij}^{bond}k_{ij}\left(r_{ij} - r_{ij}^{0}\right)^{2} +\sum_{ijkl}^{dihedrals}k_{ijkl}\left[1+\cos\left(n_{ijkl}\phi_{ijkl}-\phi_{ijkl}^{0}\right)\right] +\nonumber\\
 			&+ \sum_{ijkl}^{improper}\frac{1}{2} k_{\xi}\left[\xi_{ijkl}-\xi_{ijkl}^{0}\right]^{2} + \sum_{ijk}^{angles}k_{a}(\theta_{ijk}-\theta_{ijk}^{0})^{2}+ \sum_{ij}\left[\dfrac{q_{i} q_{j}}{\epsilon r_{ij}}+\dfrac{A_{ij}}{r_{ij}^{12}}-\dfrac{B_{ij}}{r_{ij}^{6}}\right]
 		\label{ff}
 		\end{align}
-%		\end{equation}
+		\begin{figure}
+		\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.7\textwidth,natwidth=610,natheight=642]{ff/12}
+		\caption{Tương tác liên kết}
+		\label{fig:12}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.7\textwidth,natwidth=610,natheight=642]{ff/13}
+		\caption{Tương tác góc}
+		\label{fig:13}
+		\end{subfigure}\\
+		\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.7\textwidth,natwidth=610,natheight=642]{ff/14}
+		\caption{Tương tác nhị diện}
+		\label{fig:14}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.7\textwidth,natwidth=610,natheight=642]{ff/impropers}
+		\caption{Tương tác impropers}
+		\label{fig:impropers}
+		\end{subfigure}
+		\caption{
+		\label{fig:bond}%
+		Tương tác giữa các nguyên tử có liên kết}
+		\end{figure}
 		Bốn tổng đầu (bốn tổng liên kết - bonded), lần lượt được lấy tổng theo:
 		\begin{itemize}
-		\item tất cả các liên kết trực tiếp (tương tác 1-2, xem hình \ref{})
-		\item tất cả các góc (tương tác 1-3, xem hình \ref{})
-		\item tất cả các góc nhị diện (tương tác 1-4, xem hình \ref{})
-		\item tất cả các impropers (tương tác 1-4, xem hình \ref{})
+		\item tất cả các liên kết trực tiếp (tương tác 1-2, xem hình \ref{fig:12})
+		\item tất cả các góc (tương tác 1-3, xem hình \ref{fig:13})
+		\item tất cả các góc nhị diện (tương tác 1-4, xem hình \ref{fig:14})
+		\item tất cả các impropers (tương tác 1-4, xem hình \ref{fig:impropers})
 		\end{itemize}
-		Trong đó, tông liên kết trực tiếp và các số hạng góc được biểu diễn như các dao động tử điều hòa đơn giản. Hai nguyên tử xem như dao động quanh một vị trí cân bằng.
+		Trong đó, tông liên kết trực tiếp và các số hạng góc được biểu diễn như các dao động tử điều hòa đơn giản. Hai nguyên tử xem như dao động quanh một vị trí cân bằng.\\
 		Các đại lượng $k_{ij}$,$r^{0}_{ij}$,$r_{ij}$ lần lượt là hệ số đàn hồi, độ dài liên kết ở vị trí cân bằng và độ dài liên kết thực tế giữa hai nguyên tử có liên kết hóa trị với nhau $i$ và $j$.
-		Trong tổng theo các góc, $k_{ijk}$, $\theta^{0}_{ijk}$, $\theta_{ijk}$, lần lượt là hệ số đàn hồi, góc cân bằng và góc thực tế tạo bởi các nguyên tử $i$, $j$, $k$.
-			
-		Trong tổng theo góc nhị diện, $k_{ijkl}$, $\phi^{0}_{ijkl}$, $\phi_{ijkl}$ lần lượt là hằng số lực góc nhị diện, góc nhị diện cân bằng và góc nhị diện thực tế tạo bởi các nguyên tử $i$, $j$, $k$, $l$. Hệ số $n_{ijkl}$ là hằng số đối xưng nhận giá trị 1, 2 hoặc 3 ứng với số vị trí cực tiểu khi cho góc nhị diện quay một góc $360^{0}$.
-			
-		Tương tự, trong tổng theo các impropers, $k_{\xi}$, $\xi^{0}_{ijkl}$, $\xi_{ijkl}$ lần lượt là hằng số lực improper, góc improper cân bằng và góc improper thực tế tạo bởi các nguyên tử $i$, $j$, $k$, $l$.
-			
-		Các tổng cuối trong phương trình \eqref{ff} là các tổng không liên kết (non-bonded). Các tổng này bao gồm tương tác Van der Waals (hình \ref{}) và tương tác tĩnh điện (hình \ref{}). Tương tác Van der Waals được mô tả bởi thế Lennard-Jones (6-12) và tương tác tĩnh điện được mô tả bởi thế Coulomb với giả thiết là điện tích điểm nằm tại tâm của nguyên tử \cite{}. Hằng số điện môi $\epsilon$ đặc trưng cho môi trường giữa hai nguyên tử, tham số $B_{ij}$ và $A_{ij}$ là các tham số 6-12 đặc trưng cho từng nguyên tố.
-			
-		Tất cả các hằng số lực, các tham số ứng với tọa độ cân bằng, các tham số 6-12 và hệ số đối xứng $n_{ijkl}$ được dẫn ra từ các tính toán lượng tử với độ chính xác cao và từ thực nghiệm\cite{}.
+		Trong tổng theo các góc, $k_{ijk}$, $\theta^{0}_{ijk}$, $\theta_{ijk}$, lần lượt là hệ số đàn hồi, góc cân bằng và góc thực tế tạo bởi các nguyên tử $i $, $j $, $k $.\\
+		Trong tổng theo góc nhị diện, $k_{ijkl}$, $\phi^{0}_{ijkl}$, $\phi_{ijkl}$ lần lượt là hằng số lực góc nhị diện, góc nhị diện cân bằng và góc nhị diện thực tế tạo bởi các nguyên tử $i$, $j$, $k$, $l$. Hệ số $n_{ijkl}$ là hằng số đối xưng nhận giá trị 1, 2 hoặc 3 ứng với số vị trí cực tiểu khi cho góc nhị diện quay một góc $360^{0}$.\\			
+		Tương tự, trong tổng theo các impropers, $k_{\xi}$, $\xi^{0}_{ijkl}$, $\xi_{ijkl}$ lần lượt là hằng số lực improper, góc improper cân bằng và góc improper thực tế tạo bởi các nguyên tử $i$, $j$, $k$, $l$.\\			
+		Các tổng cuối trong phương trình \eqref{ff} là các tổng không liên kết (non-bonded). Các tổng này bao gồm tương tác Van der Waals và tương tác tĩnh điện. Tương tác Van der Waals được mô tả bởi thế Lennard-Jones (6-12) và tương tác tĩnh điện được mô tả bởi thế Coulomb với giả thiết là điện tích điểm nằm tại tâm của nguyên tử \cite{Ponder2003}. Hằng số điện môi $\epsilon$ đặc trưng cho môi trường giữa hai nguyên tử, tham số $B_{ij}$ và $A_{ij}$ là các tham số 6-12 đặc trưng cho từng nguyên tố.\\			
+		Tất cả các hằng số lực, các tham số ứng với tọa độ cân bằng, các tham số 6-12 và hệ số đối xứng $n_{ijkl}$ được dẫn ra từ các tính toán lượng tử với độ chính xác cao và từ thực nghiệm\cite{Ponder2003}.
 \section{\glsentryfull{smd}}
-Chính là \gls{md} nhưng đặt thế năng thay đổi theo thời gian lên các nhóm phân tử xác định để tách các nhóm này ra. Có hai cách xác định tham số của thế năng, tương ứng với hai cách "kéo" các nhóm phân tử ra: kéo với lực kéo không đổi hoặc kéo nhóm tách ra với vận tốc không đổi. Đề tài sử dụng phương pháp kéo với vận tốc không đổi.
-Trong suốt quá trình kéo, dễ dàng để tính toán lực kéo các nhóm. Từ đó phác thảo được tương tác giữa các nhóm phân tử.
+Chính là \gls{md} nhưng đặt thế năng phụ thuộc vào thời gian lên các nhóm phân tử xác định để tách các nhóm này ra. Việc tách hai nhóm phân tử ra có tác dụng hỗ trợ kiểm tra giả thiết về chuyển trạng thái của hệ phân tử. Một cách cụ thể, \gls{smd} áp dụng đối với \gls{ligand} và \gls{receptor} giúp quan sát quá trình hai nhóm phân tử này tách ra khỏi nhau. Đây là một quá trình xảy ra trong thực tế, tuy nhiên cần khảo sát hệ trong thời gian rất dài mới có thể ngẫu nhiên quan sát được quá trình này.\\
+Có hai cách xác định tham số của thế năng, tương ứng với hai cách "kéo" các nhóm phân tử ra: kéo với lực kéo không đổi hoặc kéo nhóm tách ra với vận tốc không đổi. Đề tài sử dụng phương pháp kéo với vận tốc không đổi\cite{Lu1998}. Trong suốt quá trình kéo, dễ dàng để tính toán lực kéo các nhóm. Từ đó phác thảo được tương tác giữa các nhóm phân tử. Hơn nữa, có thể xác định được độ thay đổi năng lượng khi hệ phân tử chuyển từ trạng thái trước khi kéo sang trạng thái sau khi kéo.
+	\subsection{\glsentrytext{smd} sử dụng lực kéo không đổi}
+	
+	Bằng cách cộng thêm lực kéo với độ lớn không đổi vào nhóm các phân tử cần kéo và thực hiện quá trình mô phỏng. Đối với nhóm phân tử không cần kéo, cần cố định một cách tương đối vị trí của chúng, nhằm tránh việc bị kéo theo do tương tác với nhóm phân tử được kéo ra. Thực hiện \gls{smd} nhiều lần với giá trị lực kéo khác nhau giúp xác định lực tương tác giữa hai nhóm phân tử nằm trong khoảng giá trị nào. Qua đó, có thể đánh giá sơ tương tác giữa hai nhóm phân tử (ví dụ \gls{ligand} và \gls{receptor} được nêu ở trên).
+	\subsection{\glsentrytext{smd} sử dụng vận tốc kéo không đổi}
+	\begin{wrapfigure}{r}{0.4\textwidth}
+	\vspace{-30pt}
+	\begin{center}
+	\includegraphics[width=0.4\textwidth,natwidth=610,natheight=642]{smd-1}\\
+	\includegraphics[width=0.4\textwidth,natwidth=610,natheight=642]{smd-2}\\
+	\includegraphics[width=0.4\textwidth,natwidth=610,natheight=642]{smd-3}
+	\end{center}
+	\vspace{-5pt}
+	\caption{Bằng cách di chuyển nhóm liên kết (constraint group) với vận tốc không đổi, lực tác động lên nhóm phân tử cần kéo ra sẽ lớn dần đến một giá trị đủ để tách nhóm đó ra.}
+	\label{fig:smd}
+	\end{wrapfigure}
+	Có thể hình dung về cách kéo nhóm phân tử như hình \ref{fig:smd} được trình bày dưới đây:
+	Thế năng đàn hồi đặt lên nhóm phân tử cần kéo có dạng như sau:
+	\begin{equation}
+	U\left(\vec{r}\right) = \dfrac{1}{2} k\left[ vt - \left( \vec{r}-\vec{r}_{0} \right) \dot\vec{n} \right]^{2}
+	\end{equation}
+	với $k$ là hệ số đàn hồi, $v=constant$ là tốc độ di chuyển của nhóm liên kết, $\vec{r}$ là vị trí của hạt được kéo và $\vec{r}_{0}$ là vị trí ban đầu của hạt, $\vec{n}$ là hướng kéo.\\
+	Cách kéo nhóm phân tử này có ưu điểm so với áp dụng lực kéo không đổi là không phải thực hiện rà soát quá nhiều giá trị lực kéo để ước lượng lực tương tác giữa hai nhóm phân tử. Hơn nữa, công trung bình tác dụng lên hệ sẽ tiến đến một giá trị xác định, do nhóm liên kết di chuyển với vận tốc không đổi và công tác dụng lên hệ (một cách tương đối) sẽ bằng năng lượng liên kết giữa hai nhóm và thế năng đàn hồi $U\vec{r}$ trung bình và động năng trung bình của nhóm phân tử kéo. Nói cách khác, hệ sẽ ít bị can thiệp một cách "bạo lực" hơn so với cách kéo sử dụng lực không đổi được trình bày ở trên.
+\section{Tham số sử dụng}
+Mô phỏng đã được thực hiện 3 lần đối với mỗi phân tử 3L25 (VP35 tự nhiên), 3L27 (đột biến \gls{R312A}), 3L28 (đột biến \gls{K339A}) và phân tử VP35 đột biến \gls{K282A}.
+Các bước chạy mô phỏng được thực hiện:
+\begin{enumerate}
+\item Cực tiểu hóa năng lượng hệ phân tử
+\item Mô phỏng trạng thái (NVT) của hệ không đổi
+\item Mô phỏng trạng thái (NPT) của hệ không đổi
+\item \gls{smd}
+\end{enumerate}
+\subsubsection{Cực tiểu hóa năng lượng}
+Nhằm mục đích để hệ phân tử phân bố trong không gian sao cho thế năng tổng của hệ là thấp nhất. Điều kiện dừng chương trình: lực tối đa tác dụng lên hạt bằng $1000\ kJ/mol/nm$. Cách tính tương tác Coulomb ở khoảng cách xa: Particle Mesh Ewald (PME). Bán kính chặt cụt đối với tương tác Coulomb và Van der Waals là $r_{Coulomb}=1nm$ và $r_{VdW}=1nm$.
+\subsubsection{Cân bằng chính tắc (NVT)}
+Các thông số bán kính chặt cụt và phương pháp tính tương tác Coulomb ở khoảng cách xa vẫn như trên. Áp dụng phương pháp Berendsen để ổn định nhiệt độ của hệ tại $300K$ với $\tau_{t}=0.1\left(ps\right)$. Vận tốc của hạt được đưa vào và ổn định một cách ngẫu nhiên sao cho thoả phân bố Maxwell. Áp dụng thuật toán Verlet để giải phương trình chuyển động. Thời gian mô phỏng bước cân bằng NVT là $100\left(ps\right)$.
+\subsubsection{Cân bằng đẳng nhiệt - đẳng tích (NPT)}
+Các thông số vẫn tương tự như trên. Để ổn định áp suất của hệ tại $1 \left(bar\right)$, sử dụng phương pháp Parrinello-Rahman với $\tau_{p}=2\left(ps\right)$, hằng số nén $\beta=-\frac{1}{V}\frac{\partial V}{\partial p} = 4.5\times 10^{-5}\left(bar^{-1}\right)$. Thời gian mô phỏng bước cân bằng NPT là $100\left(ps\right)$.
+\subsubsection{\glsentrytext{smd}}
+Bán kính chặt cụt được sử dụng trong bước này là $1.4\left(nm\right)$. Tốc độ di chuyển của nhóm liên kết (constraint group) bằng $5\left(nm/ns\right)$. Lực sử dụng để kéo là $1000\left( kJ . mol^ {-1} nm^ {-2} \right)$.
 \section{Các công cụ phân tích kết quả}
 	\subsection{Lực kéo tối đa}
-	\hspace{18pt}
+	
 	Là lực lớn nhất dùng để kéo hai phân tử ra trong suốt quá trình mô phỏng. Do hệ phân tử đã ở vị trí ứng với đáy của giếng thế địa phương, nên để tách hai nhóm phân tử protein và \gls{dsrna} ra thì lực dùng để tách hai nhóm ra sẽ lớn dần đến một giá trị mà tại đó hai nhóm không còn tương tác đáng kể với nhau nữa.
-	Việc so sánh lực kéo tối đa giữa các
+	Việc so sánh lực kéo tối đa giữa các nhóm phân tử giúp đánh giá tương đối tương tác giữa các nhóm phân tử này. Điều này đặc biệt có ý nghĩa khi so sánh lực kéo các cấu hình đột biến một \gls{residue} để tìm hiểu vai trò của nó trong tương tác giữa các nhóm.
+	\subsection{Thế năng tương tác theo thời gian}
+	
+	Từ các tham số toạ độ và từ \gls{amber} đã được định nghĩa, có thể dễ dàng tính lại được đóng góp của tương tác Coulomb hoặc tương tác Van der Waals vào tương tác của một \gls{residue}. Điều này giúp đánh giá một cách tương đối vai trò của các \gls{residue}, đồng thời giúp dự đoán các amino acid có khả năng đóng góp cho tương tác giữa \gls{dsrna} và VP35.
 	\subsection{Liên kết Hydro}
-	\hspace{18pt}
-	Liên kết Hydro (H-bond) là liên kết vật lý đóng góp chủ yếu trong tương tác giữa hai nguyên tử\cite{}
-	Liên kết Hydro là liên kết giữa nguyên tử phân cực dương (donor) và nguyên tử phân cực âm (acceptor) thỏa điều kiện (i) cách nhau một khoảng 3\={A} và (ii) góc nhị diện tạo bởi donor và acceptor là lớn hơn hoặc bằng $120^{0}$.
-
-
+	
+	Liên kết Hydro (H-bond) là liên kết vật lý đóng góp rất nhiều cho tương tác giữa hai nguyên tử. Đặc biệt trong môi trường nước, liên kết Hydro là liên kết chiếm ưu thế.
+	Liên kết Hydro là liên kết giữa nguyên tử phân cực dương (donor) và nguyên tử phân cực âm (acceptor) thỏa điều kiện (i) cách nhau một khoảng 3\={A} và (ii) góc nhị diện tạo bởi donor và acceptor là lớn hơn hoặc bằng $ 120^{0} $.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %+ Ket thuc Chuong 2.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -338,42 +536,146 @@ Trong suốt quá trình kéo, dễ dàng để tính toán lực kéo các nhó
 \setcounter{chapter}{2}
 \chapter{Kết quả và thảo luận}
 %\section{A-conf}
-%\hspace{18pt}
-\section{B-conf}
-Đây là chuỗi VP35 end-cap của \gls{dsrna} (xem hình \ref{fig:vp35b}).
-	\begin{figure}[b!]
-	\centering
-	\includegraphics[width=1.0\textwidth,natwidth=610,natheight=642]{pullf}
-	\caption{}
-	\end{figure}
+%
+\section{Sự thay đổi thế năng tương tác giữa amino acid và các phân tử \glsentrytext{dsrna}}
 
-	\begin{figure}[t]
+Quan sát 81 \gls{residue} nằm trong bán kính chặt cụt khi tính toán thế năng tương tác giữa \gls{dsrna} và VP35, có thể chọn ra các \gls{residue} tiêu biểu có khả năng đóng góp cho tương tác giữa hai nhóm phân tử này dựa trên các tiêu chí sau:
+\begin{wrapfigure}{r!}{0.5\textwidth}
+\begin{center}
+\includegraphics[width=0.5\textwidth,natwidth=610,natheight=642]{275-279}
+\end{center}
+\caption{\gls{residue} 275--279, tiêu biểu C275, I278, Q279. Q279 tương tác Coulomb là chủ yếu. C275, I278 tương tác WdV là chủ yếu với thế năng cùng scale với thế năng của K339.}
+\label{fig:WdV}
+\end{wrapfigure}
+\begin{itemize}
+\item Có thé năng biến đổi theo thời gian trong quá trình mô phỏng \gls{smd}. Điều này là hợp lý vì nếu \gls{residue} đó nếu thực sự đóng góp vào tương tác \gls{dsrna}--VP35 thì khi tách hai nhóm phân tử này ra, tổng thế năng tương tác của \gls{residue} này với các phân tử của \gls{dsrna} phải giảm một cách rõ rệt.
+\item Độ giảm của thế năng được đánh giá dựa vào hai \gls{residue} đã được thực nghiệm xác minh tính quan trọng của nó trong tương tác \gls{dsrna}--VP35 là R312 và K339\cite{Leung2010}. Cụ thể, nếu độ biến thiên thế năng này có scale nhỏ hơn hẳn so với cả hai \gls{residue} trên thì đó không phải là \gls{residue} ta cần quan tâm.
+\end{itemize}
+Từ các điều kiện trên, có thể rút ra được từ kết quả chạy mô phỏng các \gls{residue} đáng quan tâm gồm: PHE239, GLU274, CYS275, ILE278, GLU279, LYS282, ARG312, ASP321, ARG322, LYS339, ILE340. Các đồ thị sau trong hình \ref{fig:Coulomb} lấy dữ liệu từ lần mô phỏng \gls{smd} thứ 2 đối với cấu hình 3L25 (tức cấu hình không đột biến). Dữ liệu từ lần mô phỏng \gls{smd} thứ 1 và thứ 3 cũng cho kết quả tương tự.
+\begin{figure}[h!]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,natwidth=610,natheight=642]{235-239}
+\caption{\gls{residue} 235--239, tiêu biểu F239}
+\label{fig:239}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,natwidth=610,natheight=642]{270-274}
+\caption{\gls{residue} 270--274, tiêu biểu Q274}
+\label{fig:274}
+\end{subfigure}\\
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,natwidth=610,natheight=642]{280-284}
+\caption{\gls{residue} 280--284, tiêu biểu K282}
+\label{fig:282}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,natwidth=610,natheight=642]{310-314}
+\caption{\gls{residue} 310-314, tiêu biểu R312 (khoảng 120 kJ/mol)}
+\label{fig:312}
+\end{subfigure}\\
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,natwidth=610,natheight=642]{320-324}
+\caption{\gls{residue} 320--324, tiêu biểu D321, R322}
+\label{fig:322}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,natwidth=610,natheight=642]{337-340}
+\caption{\gls{residue} 337--340, tiêu biểu  ILE340, K339 (khoảng 10--20 kJ/mol)}
+\label{fig:339}
+\end{subfigure}
+\caption{Đồ thị thế năng theo thời gian của \gls{residue}}
+\label{fig:Coulomb}
+\end{figure}
+Dựa vào đồ thị \ref{fig:Coulomb}, có thể thấy rằng đóng góp của tương tác Coulomb là rất đáng kể. Tuy nhiên vẫn có những \gls{residue} có đóng góp của tương tác Van der Waals là đáng kể, đó là C275 và I278, xem đồ thị \ref{fig:WdV}.
+Dựa vào đồ thị \ref{fig:339} và \ref{fig:312} có thể thấy R312 đóng vai trò tương tác trực tiếp với \gls{dsrna}. Mặc dù đột biến \gls{K339A} cũng gây mất liên kết \gls{dsrna}--VP35 trong thực nghiệm, nhưng độ thay đổi thế năng tương tác do K339 gây ra không nhiều, chỉ khoảng $10\%$ khi so với R312 gây ra.
+\clearpage
+
+\section{Kết quả phân tích liên kết Hydro}
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.7\textwidth}
+\vspace{-20pt}
+\includegraphics[width=\textwidth,natwidth=610,natheight=642]{hbond3L25_pull1}
+\vspace{-40pt}
+\caption{Lần kéo thứ 1 cấu hình 3L25}
+\label{fig:hbond3L25_pull1}
+\end{subfigure}
+\begin{subfigure}{0.7\textwidth}
+\vspace{-20pt}
+\includegraphics[width=\textwidth,natwidth=610,natheight=642]{hbond3L25_pull2}
+\vspace{-40pt}
+\caption{Lần kéo thứ 2 cấu hình 3L25}
+\label{fig:hbond3L25_pull2}
+\end{subfigure}\\
+\begin{subfigure}{0.7\textwidth}
+\vspace{-20pt}
+\includegraphics[width=\textwidth,natwidth=610,natheight=642]{hbond3L25_pull3}
+\vspace{-40pt}
+\caption{Lần kéo thứ 3 cấu hình 3L25}
+\label{fig:hbond3L25_pull3}
+\end{subfigure}
+\vspace{-20pt}
+\caption{Liên kết Hydro theo thời gian giữa các \gls{residue} và \gls{dsrna}.}
+\label{fig:hbond}
+\end{figure}
+
+Hình \ref{fig:hbond} cho thấy kết quả phân tích liên kết Hydro theo thời gian. Số \gls{residue} tham gia tạo liên kết Hydro không nhiều nên từ kết quả này có thể sàng lọc ra các \gls{residue} hiệu quả hơn.
+
+Phân tích kết quả thu được, dễ dàng nhận thấy các \gls{residue} có khả năng đóng vai trò chủ yếu trong tương tác trực tiếp giữa \gls{dsrna}--VP35 gồm Q274, Q279, K282, R312, R322, I340.
+
+\section{So sánh lực kéo}
+Đây là chuỗi VP35 end-cap của \gls{dsrna} (xem hình \ref{fig:vp35b}).
+	\begin{figure}[h]
 	\centering
-	\includegraphics[height=0.3\textheight,natwidth=610,natheight=642]{../../../Analysis/non_md/3L25/hbond}
-	\caption{Tỉ lệ \% liên kết hydro tạo bởi các cặp amino acid và \gls{dsrna}}
-	\label{fig:hbond25}
-	\end{figure}
-	\begin{figure}[p]
+	\begin{subfigure}{0.95\textwidth}
+	\includegraphics[width=0.95\textwidth,natwidth=610,natheight=642]{pullf}
+	\caption{Đường biểu diễn lực kéo trung bình theo thời gian giữa dsRNA và VP35 với phân tử không đột biến (3L25) và đột biến (3L27, 3L28, \gls{K282A})}
+	\label{pullft}
+	\end{subfigure}
+	\begin{subfigure}{0.95\textwidth}
 	\centering
-	\includegraphics[height=0.3\textheight,natwidth=610,natheight=642]{../../../Analysis/non_md/3L27/hbond}
-	\caption{Tỉ lệ \% liên kết hydro tạo bởi các cặp amino acid và \gls{dsrna}}
-	\label{fig:hbond27}
+	\includegraphics[width=0.95\textwidth,natwidth=610,natheight=642]{pullx}
+	\caption{Đường biểu diễn tọa độ khối tâm trung bình theo thời gian của dsRNA của phân tử không đột biến (3L25) và đột biến (3L27, 3L28, \gls{K282A})}
+	\label{pullxt}
+	\end{subfigure}
+	\label{}
 	\end{figure}
-	\begin{figure}[p]
-	\centering
-	\includegraphics[height=0.3\textheight,natwidth=610,natheight=642]{../../../Analysis/non_md/3L28/hbond}
-	\caption{Tỉ lệ \% liên kết hydro tạo bởi các cặp amino acid và \gls{dsrna}}
-	\label{fig:hbond28}
-	\end{figure}
-	\subsection{Phân tử không đột biến}
-\hspace{18pt}
-	Dựa vào đồ thị lực kéo dùng để tách VP35 khỏi \gls{dsrna} theo thời gian dễ dàng xác định được giá trị lực kéo tối đa. Lực kéo tối đa này cho thấy VP35 chuỗi B gắn khá chặt vào \gls{dsrna} 
-	\subsection{Đột biến R312A}
-\hspace{18pt}
-	\subsection{Đột biến K339A}
-\hspace{18pt}
-\section{AB-conf}
-\hspace{18pt}
+Quan sát hình \ref{pullft} dễ dàng nhận thấy rằng lực kéo tối đa dùng để tách dsRNA với phân tử không đột biến VP35 là lớn nhất. Điều này phù hợp với kết quả thực nghiệm\cite{Leung2010}. Cũng từ kết quả thu được, lực kéo tối đa dùng để kéo phân tử VP35 đột biến tại R312 (\gls{R312A} - cấu hình 3L27) thấp hơn hẳn so với lực kéo phân tử không đột biến, điều này cho thấy tầm quan trọng của amino acid tại vị trí này trong tương tác dsRNA-VP35.\\
+Tương tự với cấu hình 3L28 (đột biến amino acid 339 từ Lysine sang Alanine - \gls{K339A}), lực kéo tối đa dùng để tách hai nhóm phân tử thấp hơn so với lực kéo trong quá trình mô phỏng phân tử gốc 3L25, điều này phù hợp với kết quả thực nghiệm\cite{Leung2010}.\\
+Từ hình \ref{pullxt} có thể nhận thấy thời gian VP35 tương tác trực tiếp với dsRNA vào khoảng 0 đến 400 ps. Sau đó là giai đoạn dsRNA di chuyển với tốc độ ổn định. Điều này là hợp lý vì quá trình mô phỏng \gls{smd} sử dụng chế độ kéo với nhóm liên kết có vận tốc không đổi được trình bày ở chương trước. dsRNA được kéo ra và di chuyển đến khi không còn tương tác với VP35 nữa thì di chuyển gần như tự do.\\
+Từ data thu được trong quá trình mô phỏng các cấu hình không đột biến và đột biến, đề tài phát triển thêm một bước ở việc dự đoán amino acid Arginine thứ 282 cũng đóng vai trò quan trọng trong tương tác dsRNA-VP35 dựa trên các quan sát sau:
+\begin{itemize}
+\item K282 là phân tử Arginine mang điện tích, vì vậy nó có thể đóng góp nhiều cho tương tác giữa hai nhóm phân tử trong tương tác tĩnh điện. Hơn nữa, kết quả phân tích thế năng cho thấy K282 đóng góp khá nhiều vào tương tác \gls{dsrna}--VP35 (xem hình \ref{fig:hbond}).
+\item K282 là một trong những amino acid tạo liên kết Hydro tương đối nhiều (xem hình \ref{fig:hbond}).
+\end{itemize}
+Để đánh giá kết quả tiên đoán, đường biểu diễn lực kéo trung bình cấu hình đột biến K282 cho thấy lực kéo tối đa của phân tử này thấp hơn so với phân tử không đột biến và tương đối xấp xỉ với lực kéo tối đa cho cấu hình đột biến 3L28 (đột biến K339A) có được từ thực nghiệm. Như vậy, K282 có thể là một trong những amino acid chính đóng góp vào tương tác dsRNA-VP35. Việc đột biến phân tử này gây ảnh hưởng lên tương tác dsRNA-VP35 một cách rõ rệt.
+%	\begin{figure}[t]
+%	\centering
+%	\includegraphics[height=0.3\textheight,natwidth=610,natheight=642]{../../../Analysis/non_md/3L25/hbond}
+%	\caption{Tỉ lệ \% liên kết hydro tạo bởi các cặp amino acid và \gls{dsrna}}
+%	\label{fig:hbond25}
+%	\end{figure}
+%	\begin{figure}[p]
+%	\centering
+%	\includegraphics[height=0.3\textheight,natwidth=610,natheight=642]{../../../Analysis/non_md/3L27/hbond}
+%	\caption{Tỉ lệ \% liên kết hydro tạo bởi các cặp amino acid và \gls{dsrna}}
+%	\label{fig:hbond27}
+%	\end{figure}
+%	\begin{figure}[p]
+%	\centering
+%	\includegraphics[height=0.3\textheight,natwidth=610,natheight=642]{../../../Analysis/non_md/3L28/hbond}
+%	\caption{Tỉ lệ \% liên kết hydro tạo bởi các cặp amino acid và \gls{dsrna}}
+%	\label{fig:hbond28}
+%	\end{figure}
+%	\subsection{Phân tử không đột biến}
+%
+%	Dựa vào đồ thị lực kéo dùng để tách VP35 khỏi \gls{dsrna} theo thời gian dễ dàng xác định được giá trị lực kéo tối đa. Lực kéo tối đa này cho thấy VP35 chuỗi B gắn khá chặt vào \gls{dsrna} 
+%	\subsection{Đột biến R312A}
+%
+%	\subsection{Đột biến K339A}
+%
+%\section{AB-conf}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %+ Ket thuc Chuong 3.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -384,11 +686,18 @@ Trong suốt quá trình kéo, dễ dàng để tính toán lực kéo các nhó
 %%%%%%%%%%%%%%%%%%%     Chuong 4       %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                    %%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{chapter}{3}
-chapter{Kết luận và hướng phát triển tiếp theo của đề tài}
-\hspace{18pt}
+\chapter{Kết luận và hướng phát triển tiếp theo của đề tài}
+
 	
 	
-	Đề tài có nội dung khá ngắn gọn và chưa bao quát hết được các hiện tượng cơ bản khác. Tuy nhiên, phần nào đã thể hiện được tinh thần của mô phỏng trong việc áp dụng vào khoa học. Nếu có thêm thời gian, ắt hẳn đề tài còn có thể mô hình hoá nhiều đối tượng hơn.\\ 
+	Khóa luận được thực hiện trong thời gian ngắn và đạt được những kết quả phù hợp với thực nghiệm, đồng thời dự đoán amino acid đóng góp vào tương tác giữa dsRNA-VP35.\\ 
+	Kết quả thu được từ khóa luận đem lại gợi ý cho việc phát triển các phân tử có thể tấn công vào các amino acid đóng góp vào tương tác dsRNA-VP35.\\
+	Tuy nhiên, đề tài cần được thực hiện thêm quá trình mô phỏng động học thời gian dài để quan sát các trạng thái khác nhau của hệ phân tử, qua đó đánh giá chính xác hơn các amino acid đóng góp chủ yếu cho tương tác dsRNA-VP35.\\
+	Hướng phát triển tiếp theo của đề tài sẽ là:
+	\begin{itemize}
+	\item Đánh giá và tiên đoán dựa trên mô phỏng động học phân tử nhằm tìm ra các amino acid đóng góp cho tương tác dsRNA-VP35.
+	\item Tiên đoán các phân tử có khả năng gắn vào khu vực tương tác dsRNA-VP35, theo đó gợi ý phân tử thuốc có khả năng bất hoạt VP35.
+	\end{itemize}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %+ Ket thuc Chuong 4.
@@ -411,6 +720,8 @@ chapter{Kết luận và hướng phát triển tiếp theo của đề tài}
 \appendix
 \addcontentsline{chapter}{Phụ lục}
 \clearpage
+%\newpage
+%\input{phuluc}
 \newpage
-\input{phuluc}
+\input{phuluc2}
 \end{document}
