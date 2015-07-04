@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%      Phụ lục       %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%                    %%%%%%%%%%%%%%%%%%
+\chapter{Chương trình GROMACS}
+Đây là gói chương trình mã nguồn mở sử dụng giấy phép GPL3 dùng trong đề tài để thực hiện mô phỏng và đánh giá kết quả mô phỏng động học phân tử.
+
+Name:    Interaction Evaluation
+Descr:   Calculates interactions for a microstate
+Depen:   Bonded int., Non-bonded int.
+Input:   Rules, Microstate, Switches
+Output:  V, F and/or virial
+Req:     Maximum efficiency, will use cache
+ 
+Name:    Bonded/Listed Interaction Evaluation
+Descr:   Calculates interactions from a specified list (in the rules)
+Depen:  
+Input:   Rules, Microstate, Switches
+Output:  V, F and/or virial, evaluation count (for checking the total count)
+Req:     Maximum efficiency, will use cache (e.g. force tables)
+ 
+Name:    Pair Interaction Evaluation
+Descr:   Calculates pair interactions within a cut-off distance
+Depen:  
+Input:   Rules, Microstate, Switches
+Output:  V, F and/or virial
+Req:     Maximum efficiency, will use cache (e.g. pair list, force tables)
+ 
+Name:    Virtual Sites
+Descr:   Determines virtual site coordinates and redistribution
+virtual site của mô hình nước
+Input:   Rules, Microstate or F
+Output:  Microstate or F
+Req:     Could cache coefficients from X calculation for F
+ 
+Name:    Propagation
+Descr:   Propagates the microstate with several MD, EM or MC propagators
+Depen:   Constraints
+Input:   Microstate, F, T, P, Hamiltonian state, external fields
+Output:  V, F and/or virial
+Req:     Should support several integrators using a few hooks
+ 
+Name:    Constraints
+Descr:   Applies contraints to unconstrained X, V or F
+Depen:  
+Input:   Rules, Microstate and possibly F
+Output:  Constrained (or constraint components of) X, V or F
+Req:     Must be able to work in parallel with MPI and/or threads
+ 
+Name:    Measurements
+Descr:   Handles measurements during simulation
+Depen:   I/O
+Input:   Microstate, Energies, ...
+Output:  Energy file, Log
+Req:     Also records history which needs to be stored in checkpoint
+ 
+Name:    Energy Reduction (separate from Measurements?)
+Descr:   Reduce local energy terms over MPI processes (and threads?)
+Depen:  
+Input:   Local energies
+Output:  Global energies
+Req:    
+ 
+Name:    Domain Decomposition
+Descr:   Decomposes the system over domains and handles communication
+Depen:  
+Input:   Global Rules, Global Microstate, Parallel system setup
+Output:  Local Rules, Local Microstate
+Req:    
+ 
+Name:  COM calculation
+Descr:  Calculates center of mass(es) of group(s) of particles
+Depen:
+Input:  Coordinate and mass vector distributed over processes/threads, group(s)
+Output: COM(s) on each thread/process
+Req:
+
+\subsection{Flow chart of the program}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=white, thick]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, text width=6cm, draw=black, fill=white, thick]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered,text width=4cm, draw=black, fill=white, thick]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white, thick]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{figure}[H]
+\begin{center}
+	\begin{tikzpicture}[node distance=2cm]
+	\node (start) [startstop] {Start};
+	\node (in1) [io, below of=start,yshift=-0.2cm] {Input \par Incident energy \par Target, projectile's mass, spin \par $l\kk{max}$};
+	\node (pro1) [process, below of=in1,yshift=-0.7cm] {Calculate: $k\kk{dA}, k\kk{dA}, k\kk{dA}, R$ \par $ l=l\kk{min}$};
+	\node (pro2) [process, below of=pro1, yshift=-0.0cm] {$\theta\kk{max}=180, \theta=1$};
+	\node (pro3) [process, below of=pro2, yshift=+0.4cm] {$ \left( \dfrac{\text{d}\sigma}{\text{d}\Omega} \right) $};
+	\node (pro4) [process, below of=pro3, yshift=+0.4cm] {$\theta= \theta+\Delta\theta $};
+	\node (dec1) [decision, below of=pro4, yshift=-0.3cm] {$\theta \leqslant \theta\kk{max}$};
+	\node (pro5) [process, below of=dec1, yshift=-0.3cm] {$l=l+2$};
+	\node (dec2) [decision, below of=pro5, yshift=-0.3cm] {$l \leqslant l\kk{max}$};
+	%\node (out1) [io, below of=dec2,yshift=-0.1cm] {Output};
+	\node (stop) [startstop, below of=dec2,yshift=-0.3cm] {Output};
+	\node [coordinate, below left =1cm and 1cm of pro5] (left2) {};  
+	\node [coordinate, below left =1cm and 1cm of pro3] (left1) {}; 
+	\node [coordinate, right =1cm of pro3] (right2) {};    
+	
+	\draw [arrow] (start) -- (in1);
+	\draw [arrow] (in1) -- (pro1);
+	\draw [arrow] (pro1) -- (pro2);
+	\draw [arrow] (pro2) -- (pro3);
+	\draw [arrow] (pro3) -- (pro4);
+	\draw [arrow] (pro4) -- (dec1);
+	\draw [arrow] (dec1) -- node[anchor=west] {no} (pro5);
+	\draw [arrow] (dec1) -| node[anchor=west] {yes} (right2) |- (pro3);
+	\draw [arrow] (pro5) -- (dec2);
+	\draw [arrow] (dec2) -| node[anchor=east] {yes} (left2) -- (left1) |- (pro2);
+	\draw [arrow] (dec2) -- node[anchor=west] {no}(stop);
+	%\draw [arrow] (out1) -- (stop);
+	\end{tikzpicture}
+	\caption{Flow chart of the code}
+\end{center}
+\end{figure}
+Add /home/quyngan/.texlive/2014/texmf-dist/doc/man to MANPATH.
+Add /home/quyngan/.texlive/2014/texmf-dist/doc/info to INFOPATH.
+Most importantly, add /home/quyngan/.texlive/2014/bin/x86_64-linux
+to your PATH for current and future sessions.
