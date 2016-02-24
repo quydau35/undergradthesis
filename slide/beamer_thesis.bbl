@@ -1,0 +1,328 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{ynt}{ynt}
+    \entry{Hartman2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4da2757d094bf1fb45a1ce4257f93972}{Hartman}{H\bibinitperiod}{Amy\bibnamedelima L}{A\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=53c4271a6d5b77a7bb5e290b52b6282b}{Towner}{T\bibinitperiod}{Jonathan\bibnamedelima S}{J\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=6f23608391f5dfbb55b45f17a59d1d87}{Nichol}{N\bibinitperiod}{Stuart\bibnamedelima T}{S\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{498d027e446bc3706d85304f4d3f7e0c}
+      \strng{fullhash}{498d027e446bc3706d85304f4d3f7e0c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The ebolavirus VP35 protein antagonizes the cellular type I interferon response by blocking phosphorylation of IRF-3, a transcription factor that turns on the expression of a large number of antiviral genes. To identify the domain of VP35 responsible for interferon antagonism, we generated mutations within the VP35 gene and found that a C-terminal basic amino acid motif is required for inhibition of ISG56 reporter gene expression as well as IFN-beta production. Remarkably, this basic amino acid motif displayed high sequence identity with part of the N-terminal RNA-binding domain of another interferon-antagonist, the NS1 protein of influenza A virus.}
+      \field{issn}{0042-6822}
+      \field{journaltitle}{Virology}
+      \field{month}{10}
+      \field{number}{2}
+      \field{title}{{A C-terminal basic amino acid motif of Zaire ebolavirus VP35 is essential for type I interferon antagonism and displays high identity with the RNA-binding domain of another interferon antagonist, the NS1 protein of influenza A virus.}}
+      \field{volume}{328}
+      \field{year}{2004}
+      \field{pages}{177\bibrangedash 84}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.virol.2004.07.006
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Hartman, Towner, Nichol - 2004 - A C-terminal basic amino acid motif of Zaire ebolavirus VP35 is essential for type I interferon antagon.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pubmed/15464838
+      \endverb
+      \keyw{Amino Acid Motifs,Amino Acid Sequence,Cell Line,Transformed,DNA-Binding Proteins,DNA-Binding Proteins: genetics,DNA-Binding Proteins: metabolism,Ebolavirus,Ebolavirus: chemistry,Ebolavirus: immunology,Genes,Reporter,Interferon Regulatory Factor-3,Interferon Type I,Interferon Type I: antagonists \& inhibitors,Interferon Type I: genetics,Molecular Sequence Data,Mutation,Phosphorylation,Protein Structure,Tertiary,RNA-Binding Proteins,RNA-Binding Proteins: genetics,Sequence Alignment,Transcription Factors,Transcription Factors: genetics,Transcription Factors: metabolism,Viral Nonstructural Proteins,Viral Nonstructural Proteins: chemistry,Viral Nonstructural Proteins: genetics,Viral Proteins,Viral Proteins: chemistry,Viral Proteins: genetics,Viral Regulatory and Accessory Proteins}
+    \endentry
+    \entry{Horn2004}{article}{}
+      \name{author}{7}{}{%
+        {{hash=2b2e212b7bc4ba4295b3a72aa535f61f}{Horn}{H\bibinitperiod}{Hans\bibnamedelima W}{H\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{hash=f0448153342092e6c09d5b531fad9d82}{Swope}{S\bibinitperiod}{William\bibnamedelima C}{W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=d1b02645c2caeb75cf2e1187b42257a4}{Pitera}{P\bibinitperiod}{Jed\bibnamedelima W}{J\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{hash=1f876edd3ba4c74d44f10bc8089580e7}{Madura}{M\bibinitperiod}{Jeffry\bibnamedelima D}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{hash=5e0e4034802f07bc785e7f7aae464ad1}{Dick}{D\bibinitperiod}{Thomas\bibnamedelima J}{T\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=9d5654a91f1845b70896673086e8f669}{Hura}{H\bibinitperiod}{Greg\bibnamedelima L}{G\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=ecdf97fcfc8b67c27b017a1d8475e40d}{Head-Gordon}{H\bibinithyphendelim G\bibinitperiod}{Teresa}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{fe99c5bbea1e828a841b297fe7eb002c}
+      \strng{fullhash}{83ac9cdf21846a2d9a7fe47e66f91d5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A re-parameterization of the standard TIP4P water model for use with Ewald techniques is introduced, providing an overall global improvement in water properties relative to several popular nonpolarizable and polarizable water potentials. Using high precision simulations, and careful application of standard analytical corrections, we show that the new TIP4P-Ew potential has a density maximum at approximately 1 degrees C, and reproduces experimental bulk-densities and the enthalpy of vaporization, DeltaH(vap), from -37.5 to 127 degrees C at 1 atm with an absolute average error of less than 1\%. Structural properties are in very good agreement with x-ray scattering intensities at temperatures between 0 and 77 degrees C and dynamical properties such as self-diffusion coefficient are in excellent agreement with experiment. The parameterization approach used can be easily generalized to rehabilitate any water force field using available experimental data over a range of thermodynamic points.}
+      \field{annotation}{TIP4P-Ewald}
+      \field{issn}{0021-9606}
+      \field{journaltitle}{The Journal of chemical physics}
+      \field{month}{05}
+      \field{number}{20}
+      \field{title}{{Development of an improved four-site water model for biomolecular simulations: TIP4P-Ew.}}
+      \field{volume}{120}
+      \field{year}{2004}
+      \field{pages}{9665\bibrangedash 78}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1063/1.1683075
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/Dropbox/Ebola/Paper/Development of an improved four-site water model for biomolecular simulations$\backslash$: TIP4P-Ew.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pubmed/15267980
+      \endverb
+      \keyw{Computer Simulation,Kinetics,Models,Chemical,Thermodynamics,Water,Water: chemistry}
+    \endentry
+    \entry{Cardenas2006}{article}{}
+      \name{author}{8}{}{%
+        {{hash=0d7dd102b72e03629afa49d5cf95ae62}{Cárdenas}{C\bibinitperiod}{Washington\bibnamedelima B}{W\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+        {{hash=c400de8e0475f3a07f34a6f5dc696043}{Loo}{L\bibinitperiod}{Yueh-Ming}{Y\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=a7630f7259e80521d4bb999792058b85}{Gale}{G\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=4da2757d094bf1fb45a1ce4257f93972}{Hartman}{H\bibinitperiod}{Amy\bibnamedelima L}{A\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=dccd09be3285b127f66dcc1ed9f26338}{Kimberlin}{K\bibinitperiod}{Christopher\bibnamedelima R}{C\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=a0833a653fd14e29df5559eeeca67e23}{Martı́nez-Sobrido}{M\bibinithyphendelim S\bibinitperiod}{Luis}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=8d32b8331c4a855e6964094ed20e95c9}{Saphire}{S\bibinitperiod}{Erica\bibnamedelima Ollmann}{E\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+        {{hash=983584e6e54faeb335c3c7e0e9f3fa54}{Basler}{B\bibinitperiod}{Christopher\bibnamedelima F}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1c0ceca56ddf8f4ceb59f00c962576a0}
+      \strng{fullhash}{61f27089bea2bcae51039a0be0f19faa}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Ebola virus (EBOV) VP35 protein blocks the virus-induced phosphorylation and activation of interferon regulatory factor 3 (IRF-3), a transcription factor critical for the induction of alpha/beta interferon (IFN-alpha/beta) expression. However, the mechanism(s) by which this blockage occurs remains incompletely defined. We now provide evidence that VP35 possesses double-stranded RNA (dsRNA)-binding activity. Specifically, VP35 bound to poly(rI) . poly(rC)-coated Sepharose beads but not control beads. In contrast, two VP35 point mutants, R312A and K309A, were found to be greatly impaired in their dsRNA-binding activity. Competition assays showed that VP35 interacted specifically with poly(rI) . poly(rC), poly(rA) . poly(rU), or in vitro-transcribed dsRNAs derived from EBOV sequences, and not with single-stranded RNAs (ssRNAs) or double-stranded DNA. We then screened wild-type and mutant VP35s for their ability to target different components of the signaling pathways that activate IRF-3. These experiments indicate that VP35 blocks activation of IRF-3 induced by overexpression of RIG-I, a cellular helicase recently implicated in the activation of IRF-3 by either virus or dsRNA. Interestingly, the VP35 mutants impaired for dsRNA binding have a decreased but measurable IFN antagonist activity in these assays. Additionally, wild-type and dsRNA-binding-mutant VP35s were found to have equivalent abilities to inhibit activation of the IFN-beta promoter induced by overexpression of IPS-1, a recently identified signaling molecule downstream of RIG-I, or by overexpression of the IRF-3 kinases IKKepsilon and TBK-1. These data support the hypothesis that dsRNA binding may contribute to VP35 IFN antagonist function. However, additional mechanisms of inhibition, at a point proximal to the IRF-3 kinases, most likely also exist.}
+      \field{isbn}{0022-538X (Print)}
+      \field{issn}{0022-538X}
+      \field{journaltitle}{Journal of virology}
+      \field{month}{06}
+      \field{number}{11}
+      \field{title}{{Ebola virus VP35 protein binds double-stranded RNA and inhibits alpha/beta interferon production induced by RIG-I signaling.}}
+      \field{volume}{80}
+      \field{year}{2006}
+      \field{pages}{5168\bibrangedash 5178}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1128/JVI.02199-05
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/Documents/Ebola/Journal/Journal of Virology Volume 80 issue 11 2006 [doi 10.1128\%2Fjvi.02199-05] Cardenas, W. B.$\backslash$; Loo, Y.-M.$\backslash$; Gale, M.$\backslash$; Hartman, A. L.$\backslash$; Kimberlin -- Ebola Virus VP35 Protein Binds Double-Stranded RNA and Inhi.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://jvi.asm.org/cgi/content/long/80/11/5168
+      \endverb
+      \keyw{Animals,Cell Line,Cercopithecus aethiops,DEAD-box RNA Helicases,DEAD-box RNA Helicases: physiology,Double-Stranded,Double-Stranded: drug effects,Double-Stranded: metabolism,Ebolavirus,Ebolavirus: chemistry,Ebolavirus: metabolism,Humans,Interferon-alpha,Interferon-alpha: metabolism,Interferon-beta,Interferon-beta: metabolism,RNA,Signal Transduction,Signal Transduction: drug effects,Signal Transduction: physiology,Vero Cells,Viral Proteins,Viral Proteins: pharmacology,Viral Regulatory and Accessory Proteins}
+    \endentry
+    \entry{Leung2010}{article}{}
+      \name{author}{12}{}{%
+        {{hash=2034954a7b45dbb72a576c79f638a45a}{Leung}{L\bibinitperiod}{Daisy\bibnamedelima W}{D\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{hash=b7ffc5253ae4a072c5dee2a2386ee6b4}{Prins}{P\bibinitperiod}{Kathleen\bibnamedelima C}{K\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=66db8500faaaa00ae74391992e86b73f}{Borek}{B\bibinitperiod}{Dominika\bibnamedelima M}{D\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=228d5e04c53ce8abfa2414c9c3beaef6}{Farahbakhsh}{F\bibinitperiod}{Mina}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=db793a3d12ab27098d1754f4c8adc1d5}{Tufariello}{T\bibinitperiod}{JoAnn\bibnamedelima M}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=55c52fca9e54fc0f153da3b4a93c8ae2}{Ramanan}{R\bibinitperiod}{Parameshwaran}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=1315250b84aa39d4e3b0c4f68a01d8ac}{Nix}{N\bibinitperiod}{Jay\bibnamedelima C}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=e27489412d6087478a25958c9b54a415}{Helgeson}{H\bibinitperiod}{Luke\bibnamedelima a}{L\bibinitperiod\bibinitdelim a\bibinitperiod}{}{}{}{}}%
+        {{hash=639e7fb27386cab08cc5e5281d425994}{Otwinowski}{O\bibinitperiod}{Zbyszek}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=4a660977237bae3fbd4e81a6031ef39c}{Honzatko}{H\bibinitperiod}{Richard\bibnamedelima B}{R\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+        {{hash=983584e6e54faeb335c3c7e0e9f3fa54}{Basler}{B\bibinitperiod}{Christopher\bibnamedelima F}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=ce54f99438bc8ac55b22d4d23975cc03}{Amarasinghe}{A\bibinitperiod}{Gaya\bibnamedelima K}{G\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{682ceaa0b06485226a7811af639a12e7}
+      \strng{fullhash}{35086e7002dfefc04b3b717a47e5814f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ebola viral protein 35 (VP35), encoded by the highly pathogenic Ebola virus, facilitates host immune evasion by antagonizing antiviral signaling pathways, including those initiated by RIG-I-like receptors. Here we report the crystal structure of the Ebola VP35 interferon inhibitory domain (IID) bound to short double-stranded RNA (dsRNA), which together with in vivo results reveals how VP35-dsRNA interactions contribute to immune evasion. Conserved basic residues in VP35 IID recognize the dsRNA backbone, whereas the dsRNA blunt ends are 'end-capped' by a pocket of hydrophobic residues that mimic RIG-I-like receptor recognition of blunt-end dsRNA. Residues critical for RNA binding are also important for interferon inhibition in vivo but not for viral polymerase cofactor function of VP35. These results suggest that simultaneous recognition of dsRNA backbone and blunt ends provides a mechanism by which Ebola VP35 antagonizes host dsRNA sensors and immune responses.}
+      \field{isbn}{1545-9985 (Electronic)$\backslash$n1545-9985 (Linking)}
+      \field{issn}{1545-9993}
+      \field{journaltitle}{Nature structural \& molecular biology}
+      \field{month}{02}
+      \field{number}{2}
+      \field{title}{{Structural basis for dsRNA recognition and interferon antagonism by Ebola VP35.}}
+      \field{volume}{17}
+      \field{year}{2010}
+      \field{pages}{165\bibrangedash 172}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1038/nsmb.1765
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Leung et al. - 2010 - Structural basis for dsRNA recognition and interferon antagonism by Ebola VP35.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2872155%5C&tool=pmcentrez%5C&rendertype=abstract
+      \endverb
+      \keyw{Binding Sites,Crystallography,DEAD-box RNA Helicases,DEAD-box RNA Helicases: immunology,Double-Stranded,Double-Stranded: metabolism,Ebolavirus,Ebolavirus: chemistry,Ebolavirus: immunology,Immune Evasion,Interferons,Interferons: antagonists \& inhibitors,Models,Molecular,Protein Binding,Protein Structure,RNA,RNA-Binding Proteins,RNA-Binding Proteins: chemistry,RNA-Binding Proteins: metabolism,Tertiary,Viral Regulatory and Accessory Proteins,Viral Regulatory and Accessory Proteins: chemistry,Viral Regulatory and Accessory Proteins: metabolis,X-Ray}
+    \endentry
+    \entry{Ramanan2011}{article}{}
+      \name{author}{6}{}{%
+        {{hash=55c52fca9e54fc0f153da3b4a93c8ae2}{Ramanan}{R\bibinitperiod}{Parameshwaran}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=c53288977d6a52f23347c673d4d242f4}{Shabman}{S\bibinitperiod}{Reed\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=b0cd0925b8ff0ba4aaf4d78cc4b00d71}{Brown}{B\bibinitperiod}{Craig\bibnamedelima S.}{C\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=98296b22909776bb627b19a464b107c7}{Amarasinghe}{A\bibinitperiod}{Gaya\bibnamedelima K.}{G\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=204c100e6a1845c291eb5b6337b2610b}{Basler}{B\bibinitperiod}{Christopher\bibnamedelima F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=d83ca43a9735e2193557f33dc8c0a434}{Leung}{L\bibinitperiod}{Daisy\bibnamedelima W.}{D\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Molecular Diversity Preservation International (MDPI)}%
+      }
+      \strng{namehash}{acdd75972a14b58a51a5acfa051ed441}
+      \strng{fullhash}{f8142c8b47c25f24bb66dd5114c4ca3a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Filoviridae family of viruses, which includes the genera Ebolavirus (EBOV) and Marburgvirus (MARV), causes severe and often times lethal hemorrhagic fever in humans. Filoviral infections are associated with ineffective innate antiviral responses as a result of virally encoded immune antagonists, which render the host incapable of mounting effective innate or adaptive immune responses. The Type I interferon (IFN) response is critical for establishing an antiviral state in the host cell and subsequent activation of the adaptive immune responses. Several filoviral encoded components target Type I IFN responses, and this innate immune suppression is important for viral replication and pathogenesis. For example, EBOV VP35 inhibits the phosphorylation of IRF-3/7 by the TBK-1/IKK$\epsilon$ kinases in addition to sequestering viral RNA from detection by RIG-I like receptors. MARV VP40 inhibits STAT1/2 phosphorylation by inhibiting the JAK family kinases. EBOV VP24 inhibits nuclear translocation of activated STAT1 by karyopherin-$\alpha$. The examples also represent distinct mechanisms utilized by filoviral proteins in order to counter immune responses, which results in limited IFN-$\alpha$/$\beta$ production and downstream signaling.}
+      \field{issn}{1999-4915}
+      \field{journaltitle}{Viruses}
+      \field{month}{09}
+      \field{number}{9}
+      \field{title}{{Filoviral Immune Evasion Mechanisms}}
+      \field{volume}{3}
+      \field{year}{2011}
+      \field{pages}{1634\bibrangedash 1649}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.3390/v3091634
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Ramanan et al. - 2011 - Filoviral Immune Evasion Mechanisms.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187693/%20http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3187693%5C&tool=pmcentrez%5C&rendertype=abstract
+      \endverb
+      \keyw{Adaptive Immunity,Animals,Ebola,Ebola: immunology,Ebola: virology,Ebolavirus,Ebolavirus: immunology,Ebolavirus: metabolism,Ebolavirus: pathogenicity,Hemorrhagic Fever,Humans,Immune Evasion,Immune Evasion: immunology,Immunity,Innate,Interferon Type I,Interferon Type I: metabolism,Marburg Virus Disease,Marburg Virus Disease: immunology,Marburg Virus Disease: virology,Marburgvirus,Marburgvirus: immunology,Marburgvirus: metabolism,Marburgvirus: pathogenicity,Phosphorylation,Signal Transduction,Viral Proteins,Viral Proteins: metabolism,Virus Replication}
+    \endentry
+    \entry{SuanLi2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8307d99ae400f4d729f257d40fd35e85}{{Suan\bibnamedelimb Li}}{S\bibinitperiod}{Mai}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=462ff80ba77c75ddb12c054db52bb80f}{{Khanh\bibnamedelimb Mai}}{K\bibinitperiod}{Binh}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d9a9de39c8d31f6f4f82160606556e85}
+      \strng{fullhash}{d9a9de39c8d31f6f4f82160606556e85}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15748936}
+      \field{journaltitle}{Current Bioinformatics}
+      \field{number}{4}
+      \field{title}{{Steered Molecular Dynamics-A Promising Tool for Drug Design}}
+      \field{volume}{7}
+      \field{year}{2012}
+      \field{pages}{342\bibrangedash 351}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.2174/157489312803901009
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/Dropbox/Ebola/Paper/Li\_review\_CurrBioInfo.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.eurekaselect.com/openurl/content.php?genre=article%5C&issn=1574-8936%5C&volume=7%5C&issue=4%5C&spage=342
+      \endverb
+      \keyw{binding free energy,drug design,influenza virus,neuraminidase,rupture force,steered molecular dynamics}
+    \endentry
+    \entry{Brown2014}{article}{}
+      \name{author}{22}{}{%
+        {{hash=2e40d3116507e5b1b91a592347fb7977}{Brown}{B\bibinitperiod}{Craig\bibnamedelima S}{C\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=7405a51cdc25193f7dd4183d4a4eb6e3}{Lee}{L\bibinitperiod}{Michael\bibnamedelima S}{M\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=2034954a7b45dbb72a576c79f638a45a}{Leung}{L\bibinitperiod}{Daisy\bibnamedelima W}{D\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{hash=62780d281ac2c8cf888ce22aece12503}{Wang}{W\bibinitperiod}{Tianjiao}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=b1dd1a9ff59cc6aeba590fc68bcc39cf}{Xu}{X\bibinitperiod}{Wei}{W\bibinitperiod}{}{}{}{}}%
+        {{hash=0b8a6ec8f57b3a725a1a15193ab349c3}{Luthra}{L\bibinitperiod}{Priya}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=16bcf8076aa6c2aee05678df4f0a4ee4}{Anantpadma}{A\bibinitperiod}{Manu}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=6670a19ee7d7d90d5c9d945b60d45667}{Shabman}{S\bibinitperiod}{Reed\bibnamedelima S}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=d0c8c6645768d8739e78bc78ea4a013a}{Melito}{M\bibinitperiod}{Lisa\bibnamedelima M}{L\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=9b5b6e42104c3c694f7a3d7e06671b59}{MacMillan}{M\bibinitperiod}{Karen\bibnamedelima S}{K\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=66db8500faaaa00ae74391992e86b73f}{Borek}{B\bibinitperiod}{Dominika\bibnamedelima M}{D\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=639e7fb27386cab08cc5e5281d425994}{Otwinowski}{O\bibinitperiod}{Zbyszek}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=55c52fca9e54fc0f153da3b4a93c8ae2}{Ramanan}{R\bibinitperiod}{Parameshwaran}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=9fd4ede22398881ec16d1cae30a4bb99}{Stubbs}{S\bibinitperiod}{Alisha\bibnamedelima J}{A\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=33407db4e2f7bc4a1b53fe68b0015557}{Peterson}{P\bibinitperiod}{Dayna\bibnamedelima S}{D\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=f2b9b7df9ba26e9c04725c31adce953a}{Binning}{B\bibinitperiod}{Jennifer\bibnamedelima M}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=fb250483070b43d09421e53717e4c4fa}{Tonelli}{T\bibinitperiod}{Marco}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=00c15e81ab9a4cba34c1d1b25d46ea67}{Olson}{O\bibinitperiod}{Mark\bibnamedelima A}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=1b5c948001055325d749e6e24ff4308f}{Davey}{D\bibinitperiod}{Robert\bibnamedelima a}{R\bibinitperiod\bibinitdelim a\bibinitperiod}{}{}{}{}}%
+        {{hash=34426540b8db33af1d83a97214f3c824}{Ready}{R\bibinitperiod}{Joseph\bibnamedelima M}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=983584e6e54faeb335c3c7e0e9f3fa54}{Basler}{B\bibinitperiod}{Christopher\bibnamedelima F}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=ce54f99438bc8ac55b22d4d23975cc03}{Amarasinghe}{A\bibinitperiod}{Gaya\bibnamedelima K}{G\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{ebd88c3daa4de4edfb2b0501f8522802}
+      \strng{fullhash}{aaee9778fba1c2c4d33e770e6e14d018}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Ebola virus (EBOV) genome only encodes a single viral polypeptide with enzymatic activity, the viral large (L) RNA-dependent RNA polymerase protein. However, currently, there is limited information about the L protein, which has hampered the development of antivirals. Therefore, antifiloviral therapeutic efforts must include additional targets such as protein-protein interfaces. Viral protein 35 (VP35) is multifunctional and plays important roles in viral pathogenesis, including viral mRNA synthesis and replication of the negative-sense RNA viral genome. Previous studies revealed that mutation of key basic residues within the VP35 interferon inhibitory domain (IID) results in significant EBOV attenuation, both in vitro and in vivo. In the current study, we use an experimental pipeline that includes structure-based in silico screening and biochemical and structural characterization, along with medicinal chemistry, to identify and characterize small molecules that target a binding pocket within VP35. NMR mapping experiments and high-resolution x-ray crystal structures show that select small molecules bind to a region of VP35 IID that is important for replication complex formation through interactions with the viral nucleoprotein (NP). We also tested select compounds for their ability to inhibit VP35 IID-NP interactions in vitro as well as VP35 function in a minigenome assay and EBOV replication. These results confirm the ability of compounds identified in this study to inhibit VP35-NP interactions in vitro and to impair viral replication in cell-based assays. These studies provide an initial framework to guide development of antifiloviral compounds against filoviral VP35 proteins.}
+      \field{issn}{1089-8638}
+      \field{journaltitle}{Journal of molecular biology}
+      \field{month}{05}
+      \field{number}{10}
+      \field{title}{{In silico derived small molecules bind the filovirus VP35 protein and inhibit its polymerase cofactor activity.}}
+      \field{volume}{426}
+      \field{year}{2014}
+      \field{pages}{2045\bibrangedash 58}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.jmb.2014.01.010
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Brown et al. - 2014 - In silico derived small molecules bind the filovirus VP35 protein and inhibit its polymerase cofactor activity.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pubmed/24495995%20http://www.sciencedirect.com/science/article/pii/S0022283614000485
+      \endverb
+      \keyw{Antiviral Agents,Antiviral Agents: chemistry,Antiviral Agents: pharmacology,Biomolecular,Coenzymes,Coenzymes: antagonists \& inhibitors,Coenzymes: chemistry,Computer Simulation,Crystallography,DNA-Directed RNA Polymerases,DNA-Directed RNA Polymerases: antagonists \& inhibi,DNA-Directed RNA Polymerases: metabolism,Ebolavirus,Ebolavirus: drug effects,Ebolavirus: enzymology,Models,Molecular,Nuclear Magnetic Resonance,Protein Binding,Protein Interaction Domains and Motifs,Protein Interaction Domains and Motifs: physiology,Pyrroles,Pyrroles: chemistry,Pyrroles: metabolism,Pyrroles: pharmacology,Small Molecule Libraries,Small Molecule Libraries: chemistry,Small Molecule Libraries: pharmacology,Viral Regulatory and Accessory Proteins,Viral Regulatory and Accessory Proteins: antagonis,Viral Regulatory and Accessory Proteins: chemistry,X-Ray}
+    \endentry
+    \entry{Dapiaggi2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=52629c7675c06a10f501f6453383790f}{Dapiaggi}{D\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=226d28246958dd837b7c3969dff7d2de}{Pieraccini}{P\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=ccff52d0e613236a7dd15ea6d55f5e3d}{Sironi}{S\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{240edcd9c5d27c17868730940a5ecee0}
+      \strng{fullhash}{240edcd9c5d27c17868730940a5ecee0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1742-206X}
+      \field{journaltitle}{Mol. BioSyst.}
+      \field{title}{{In silico study of VP35 inhibitors: from computational alanine scanning to essential dynamics}}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1039/C5MB00348B
+      \endverb
+      \verb{file}
+      \verb :home/quyngan/Documents/Ebola/Journal/10.1039@c5mb00348b.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://xlink.rsc.org/?DOI=C5MB00348B
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

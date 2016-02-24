@@ -1,0 +1,226 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{beamer}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+
+
+
+
+\title[Short Paper Title]{Title As It Is In the Proceedings}
+
+
+\subtitle{Include Only If Paper Has a Subtitle}
+
+
+\author[Author, Another]{F.~Author\inst{1} \and S.~Another\inst{2}}
+
+
+\institute[Universities of Somewhere and Elsewhere]{\inst{1}Department of Computer Science\\
+University of Somewhere\and \inst{2}Department of Theoretical Philosophy\\
+University of Elsewhere}
+
+
+\date[CFP 2003]{Conference on Fabulous Presentations, 2003}
+
+\makebeamertitle
+
+
+%\pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+%\logo{\pgfuseimage{institution-logo}}
+
+
+
+\AtBeginSubsection[]{%
+  \frame<beamer>{ 
+    \frametitle{Outline}   
+    \tableofcontents[currentsection,currentsubsection] 
+  }
+}
+
+
+
+%\beamerdefaultoverlayspecification{<+->}
+\begin{frame}{Outline}
+
+
+\tableofcontents{}
+
+
+
+
+\end{frame}
+
+\section{Motivation}
+
+
+\subsection[Basic Problem]{The Basic Problem That We Studied}
+\begin{frame}{Make Titles Informative. Use Uppercase Letters.}
+
+
+\framesubtitle{Frame subtitles are optional. Use upper- or lowercase letters.}
+\begin{itemize}
+\item Use Itemize a lot.
+
+
+\pause{}
+
+\item Use very short sentences or short phrases.
+
+
+\pause{}
+
+\item These overlays are created using the Pause style.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Make Titles Informative. }
+
+\begin{itemize}
+\item<1-> You can also use overlay specifications to create overlays.
+\item<3-> This allows you to present things in any order.
+\item<2-> This is shown second.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Make Titles Informative.}
+
+\begin{block}<1->{}
+
+\begin{itemize}
+\item Untitled block.
+\item Shown on all slides.
+\end{itemize}
+\end{block}
+\begin{exampleblock}<2->{Some Example Block Title}
+
+\begin{itemize}
+\item $e^{i\pi}=-1$.
+\item $e^{i\pi/2}=i$.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\subsection{Previous Work}
+\begin{frame}{Make Titles Informative. }
+
+\begin{example}<1->
+On first slide. 
+\end{example}
+
+
+
+\begin{example}<2->
+On second slide.
+\end{example}
+
+\end{frame}
+
+\section{Our Results/Contribution}
+
+
+\subsection{Main Results}
+\begin{frame}{Make Titles Informative. }
+
+\begin{theorem}
+On first slide.
+\end{theorem}
+
+
+\pause{}
+\begin{corollary}
+On second slide.
+\end{corollary}
+
+\end{frame}
+
+\begin{frame}{Make Titles Informative. }
+
+\begin{columns}[t]
+
+
+\column{5cm}
+\begin{theorem}<1->
+In left column.
+\end{theorem}
+
+
+\column{5cm}
+\begin{corollary}<2->
+In right column.\\
+New line
+\end{corollary}
+
+\end{columns}
+
+\end{frame}
+
+\subsection{Basic Ideas for Proofs/Implementations}
+
+
+\section*{Summary}
+\begin{frame}{Summary}
+
+\begin{itemize}
+\item The \alert{first main message} of your talk in one or two lines.
+\item The \alert{second main message} of your talk in one or two lines.
+\item Perhaps a \alert{third message}, but not more than that.
+\end{itemize}
+
+\medskip{}
+
+\begin{itemize}
+\item Outlook
+
+\begin{itemize}
+\item What we have not done yet.
+\item Even more stuff.
+\end{itemize}
+\end{itemize}
+\end{frame}
+\appendix
+
+\section*{Appendix}
+
+
+\subsection*{For Further Reading}
+\begin{frame}[allowframebreaks]{For Further Reading}
+
+
+\beamertemplatebookbibitems
+\begin{thebibliography}{1}
+\bibitem{Author1990}A. Author. \newblock\emph{Handbook of Everything}.\newblock
+Some Press, 1990.\beamertemplatearticlebibitems
+
+\bibitem{Someone2002}S. Someone.\newblock On this and that\emph{.}
+\newblock\emph{Journal on This and That}. 2(1):50--100, 2000.\end{thebibliography}
+\end{frame}
+
+\end{document}

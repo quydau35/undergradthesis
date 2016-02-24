@@ -1,0 +1,15 @@
+[1] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'beamer_thesis.blg'
+[126] biber:276> INFO - === T3 Th07 21, 2015, 10:50:00
+[126] Biber.pm:333> INFO - Reading 'beamer_thesis.bcf'
+[244] Biber.pm:645> INFO - Found 8 citekeys in bib section 0
+[266] Biber.pm:2977> INFO - Processing section 0
+[285] Biber.pm:3115> INFO - Looking for bibtex format file '../thesis.bib' for section 0
+[314] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[341] bibtex.pm:895> INFO - Found BibTeX data source '../thesis.bib'
+[555] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[556] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[556] Biber.pm:2854> INFO - Sorting list 'ynt' of type 'entry' with scheme 'ynt' and locale 'en-US'
+[556] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[570] bbl.pm:505> INFO - Writing 'beamer_thesis.bbl' with encoding 'UTF-8'
+[574] bbl.pm:596> INFO - Output to beamer_thesis.bbl

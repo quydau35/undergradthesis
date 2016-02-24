@@ -24,10 +24,10 @@
 
 \pagenumbering{roman}\pagestyle{plain}
 \pagestyle{fancy}
-\lhead{\it Tương tác lực giữa phân tử VP35 và dsRNA của virus Ebola}
+\lhead{\it Khảo sát tương tác giữa phân tử protein VP35 và dsRNA của virus Ebola}
 \rhead{\it }
 \lfoot{\it Nguyễn Hữu Quý Ngân} 			         
-\rfoot{\it Theoretical Physics - HCMUS}
+\rfoot{\it Bộ môn Vật lý Lý thuyết - HCMUS}
 \renewcommand{\headrulewidth}{1,2pt} 			
 \renewcommand{\footrulewidth}{1,2pt}   % Cái này là tiêu đề chạy
 
@@ -64,7 +64,7 @@ description={Đột biến amino acid Lysine ở vị trí thứ 339 thành Alan
 {
 name={Lys282Ala},
 description={Đột biến amino acid Lysine ở vị trí thứ 282 thành Alanine.}}
-\newacronym{ehf}{EHF}{Sốt xuất huyết Ebola - Ebola Hemmohaegic Fever -}
+\newacronym{ehf}{EHF}{Sốt xuất huyết Ebola - Ebola Haemorrhagic Fever -}
 \newacronym{md}{MD}{phương pháp động học phân tử - Molecular dynamics -}
 \newacronym{smd}{SMD}{Steered Molecular Dynamics}
 \newacronym{dsrna}{dsRNA}{chuỗi kép RNA - double-strain RNA -}
@@ -166,11 +166,9 @@ Trên hết, con xin cảm ơn ba mẹ đã luôn tin tưởng con có thể h�
 \newpage
 \addcontentsline{toc}{chapter}{\protect{}Lời mở đầu}
 \chapter*{Lời mở đầu}
-	Ebola là bệnh sốt xuất huyết có tỷ lệ tử vong cao và chưa có thuốc đặc trị cũng như vaccine để phòng ngừa. Để có thể tìm được thuốc, chúng ta cần tìm hiểu các protein tham gia vào quá trình virus Ebola sao chép. Một trong những protein có nhiều vai trò trong quá trình sao chép của virus Ebola là VP35. Một trong các chức năng của VP35 là gắn vào vật chất di truyền của virus Ebola (\gls{dsrna}) và ngăn cản hệ thống miễn dịch phát hiện ra sự có mặt của \gls{dsrna} trong tế bào.
+	\Glsentryfull{evd} hay \glsentryfull{ehf} có tỷ lệ tử vong cao và chưa có thuốc đặc trị cũng như vaccine để phòng ngừa. Để có thể tìm được thuốc, chúng ta cần tìm hiểu các protein tham gia vào quá trình virus Ebola xâm nhập tế bào và sao chép. Một trong những protein có nhiều vai trò trong quá trình sao chép của virus Ebola là VP35. Một trong các chức năng của VP35 là gắn vào vật chất di truyền của virus Ebola (\glsentryfull{dsrna}) và ngăn cản hệ thống miễn dịch phát hiện ra sự có mặt của \gls{dsrna} trong tế bào.
 	
-	Đề tài tập trung vào việc phân tích tương tác của phân tử VP35 và \gls{dsrna} của virus Ebola (\gls{ebov}) nhằm đánh giá các amino acid có vai trò quan trọng trong tương tác giữa hai phân tử trên. Đề tài sử dụng phương pháp mô phỏng \gls{smd}, nhằm khảo sát sự chuyển trạng thái từ VP35--\gls{dsrna} tương tác với nhau sang trạng thái VP35--\gls{dsrna} không tương tác. Kết quả của khóa luận cho thấy các amino acid Arg312 và Lys339 của VP35 đóng vai trò quan trọng trong tương tác VP35-dsRNA, kết quả này phù hợp với thực nghiệm \cite{Leung2010}.
-	
-	Đồng thời đề tài cũng cho thấy đột biến amino acid Lys282 từ Lysine thành Alanine (Lys282Ala) làm giảm khả năng liên kết giữa VP35 và \gls{dsrna}. Do vậy Lys282 được dự đoán là đóng vai trò quan trọng trong tương tác giữa VP35 và \gls{dsrna}.
+	Đề tài tập trung vào việc phân tích tương tác của phân tử VP35 và \gls{dsrna} của virus Ebola (\gls{ebov}) nhằm đánh giá các amino acid có vai trò quan trọng trong tương tác giữa hai phân tử trên. Đề tài sử dụng phương pháp mô phỏng \gls{smd} nhằm khảo sát sự chuyển trạng thái từ VP35--\gls{dsrna} tương tác với nhau sang trạng thái VP35--\gls{dsrna} không tương tác. Kết quả của khóa luận cho thấy các amino acid Arg312 và Lys339 của VP35 đóng vai trò quan trọng trong tương tác VP35-dsRNA. Kết quả này phù hợp với thực nghiệm nghiên cứu cấu trúc của VP35 \cite{Leung2010}. Đồng thời đề tài cũng cho thấy đột biến amino acid Lys282 từ Lysine thành Alanine (Lys282Ala) làm giảm khả năng liên kết giữa VP35 và \gls{dsrna}. Do vậy Lys282 được dự đoán đóng vai trò quan trọng trong tương tác giữa VP35 và \gls{dsrna}.
 	
 %	Phương pháp được sử dụng là \gls{smd}. Mô hình phân tử nước được sử dụng là TIP-4P\cite{Horn2004} và \gls{amber}\cite{Hornak2006} trong quá trình mô phỏng động học.
 	
@@ -201,12 +199,12 @@ Trên hết, con xin cảm ơn ba mẹ đã luôn tin tưởng con có thể h�
 
 	\gls{evd} hay \gls{ehf} là bệnh truyền nhiễm trên động vật có vú gây bởi \glsentryfull{ebov}. Bệnh được phát hiện lần đầu năm 1976 tại Trung Phi\cite{Feldmann2003}. Tỉ lệ tử vong nếu không được chữa trị lên đến 90\% ở chủng \gls{zebov}. Đây là bệnh có tốc độ bùng phát cao và khó kiểm soát do Ebola có thể lây truyền qua nhiều động vật là vật chủ trung gian, đồng thời lây truyền qua tiếp xúc với dịch tiết từ cơ thể người bệnh\cite{Colebunders2000}.
 	
-	\gls{evd} đặc biệt nguy hiểm và có khả năng xuất hiện ở các nước có khí hậu nhiệt đới, cận nhiệt\cite{Ansari2014}. Đồng thời, \gls{evd} lây truyền qua dơi ăn trái cây và các động vật như tinh tinh, khỉ, heo\cite{Kuhn2010}, nên khả năng xuất hiện ở Việt Nam là rất cao. Trong nhiều thập kỷ, việc tìm hiểu về \gls{ebov} được quan tâm nhiều khi vũ khí sinh học trở nên phát triển\cite{Feldmann2003, Lee2009}.
+	\gls{evd} đặc biệt nguy hiểm và có khả năng xuất hiện ở các nước có khí hậu nhiệt đới, cận nhiệt\cite{Ansari2014}. Đồng thời, \gls{evd} lây truyền qua dơi ăn trái cây và các động vật như tinh tinh, khỉ, heo\cite{Kuhn2010}, nên khả năng xuất hiện ở Việt Nam là rất cao nếu không được kiểm soát và theo dõi chặt chẽ. Trong nhiều thập kỷ, việc tìm hiểu về \gls{ebov} được quan tâm nhiều khi vũ khí sinh học trở nên phát triển\cite{Feldmann2003, Lee2009}.
 	
 \subsection{Các protein của \glsentrytext{ebov}}
 
-	Cần biết rõ về các protein có trong \gls{ebov} để phác thảo được các phương án tấn công \gls{ebov} được nói đến ở mục tiếp theo.
-	\Gls{ebov} thuộc họ Filoviridae, bộ Mononegravirale, tức là \gls{ebov} thuộc họ virus có vật chất di truyền RNA gram âm và có hình sợi\cite{Kuhn2010}. \Gls{ebov} được cấu tạo bởi 7 loại protein với các chức năng khác nhau\cite{Huang2002}.
+	Việc tìm hiểu các protein có trong \gls{ebov} có ý nghĩa quan trọng để tìm ra các phương án ngăn chặn \gls{ebov}.
+	\Gls{ebov} thuộc họ Filoviridae, bộ Mononegravirale, tức là \gls{ebov} thuộc họ virus có vật chất di truyền RNA gram âm và có hình sợi\cite{Kuhn2010}. \Gls{ebov} được cấu tạo bởi 7 loại protein với các chức năng khác nhau\cite{Huang2002}. Xem hình \ref{fig:encode}.
 	\begin{figure}[h]
 	\centering
 	\begin{subfigure}{\textwidth}
@@ -222,10 +220,11 @@ Trên hết, con xin cảm ơn ba mẹ đã luôn tin tưởng con có thể h�
 	\label{fig:ebola_proteins}
 	\end{subfigure}
 	\end{figure}
+	Các protein có của \gls{ebov} gồm:
 	\begin{itemize}
-	\item \gls{gp} là protein nằm ở vỏ của virus, mang các thụ thể như các chìa khóa giúp \gls{ebov} đột nhập vào tế bào\cite{Johnson2006, Lee2009}.
+	\item \gls{gp} là protein nằm ở vỏ của virus, mang các thụ thể như các chìa khóa giúp \gls{ebov} xâm nhập vào tế bào vật chủ \cite{Johnson2006, Lee2009}.
 	\item VP40 là protein ma trận, giúp định hình cấu trúc cho \gls{ebov}\cite{Dessen2000, Noda2002}.
-	\item VP24 là protein có vai trò ngăn chặn các \gls{ifn} kích hoạt các gene mã hóa các protein mang tính báo động của cơ thể\cite{Reid2006}.
+	\item VP24 là protein có vai trò ngăn chặn các \gls{ifn}, một loại protein có chức năng kích hoạt các gene mã hóa các protein mang tính báo động của cơ thể\cite{Reid2006}.
 	\item VP30 là protein có vai trò hỗ trợ phiên mã \gls{dsrna}\cite{Weik2002}.
 	\item L protein và \gls{np}\cite{Feldmann2003,Dziubanska:be5269} có vai trò quan trọng trong quá trình phiên mã \gls{dsrna}, đồng thời \gls{np} giữ cho chuỗi đơn RNA của \gls{ebov} không bị tổn hại\cite{Dziubanska:be5269}
 	\item VP35 là phân tử có nhiều cấu trúc thực nghiệm và nắm giữ nhiều vai trò quan trọng trong quá trình phiên mã và vô hiệu cơ chế phát hiện RNA lạ của cơ thể người\cite{Muhlberger1999,Basler2000,Basler2003,Enterlein2006,Feng2007,Prins2009}.
@@ -241,7 +240,7 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 		\label{fig:viruscycle}
 		\end{figure}
 
-		EBOV thâm nhập tế bào thành mạch máu và thực hiện quá trình phiên mã, dịch mã, tổng hợp vật chất. Trong quá trình sao chép, protein VP35 sẽ bất hoạt phân tử \gls{rig-i} (là một loại enzym có chức năng phát hiện chuỗi vật chất di truyền của các virus cúm A, virus Sendai, họ flavivirus) và vô hiệu hóa hệ thống miễn dịch. Sau khi nhân lên với số lượng lớn, EBOV sẽ giải phóng khỏi tế bào và xâm nhập các tế bào khác\cite{Colebunders2000} (xem hình \ref{fig:viruscycle}).
+		EBOV xâm nhập tế bào thành mạch máu và thực hiện quá trình phiên mã, dịch mã, tổng hợp vật chất. Trong quá trình sao chép, protein VP35 sẽ bất hoạt phân tử \gls{rig-i} (là một loại enzym có chức năng phát hiện chuỗi vật chất di truyền của các virus cúm A, virus Sendai, họ flavivirus) và vô hiệu hóa hệ thống miễn dịch. Sau khi nhân lên với số lượng lớn, EBOV sẽ giải phóng khỏi tế bào vật chủ và xâm nhập các tế bào khác\cite{Colebunders2000} (xem hình \ref{fig:viruscycle}).
 \subsection{Quá trình hệ thống miễn dịch hoạt động}
 
 		Phân tử \gls{rig-i} có vai trò phát hiện các dsRNA lạ và kích hoạt tế bào sản xuất \gls{ifn}$\alpha / \beta$\cite{Cardenas2006}. Sau khi tế bào bệnh bị phá vỡ do virus nhân lên với số lượng lớn và giải phóng ra ngoài, \gls{ifn}$\alpha / \beta$ (protein tín hiệu của tế bào bị nhiễm bệnh) cũng được giải phóng theo và bám vào thụ thể của các tế bào lân cận. Sự bám này là tín hiệu cho hệ thống miễn dịch hoạt động và phá hủy tất cả các tế bào có chứa các tác nhân lạ\cite{DeAndrea2002}.
@@ -252,8 +251,13 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 %		\label{}
 %		\end{figure}
 \subsection{VP35 vô hiệu hệ thống miễn dịch}
-
-		VP35 bám vào dsRNA của EBOV và không cho \gls{rig-i} phát hiện dsRNA, do \gls{rig-i} phát hiện dsRNA bằng cách liên kết với dsRNA. Theo đó, không có tín hiệu kích hoạt tế bào sản xuất IFN$\alpha / \beta$ và hệ thống miễn dịch không được báo động khi \gls{ebov} phá vỡ thành tế bào và chui ra ngoài\cite{Hartman2004}.
+		VP35 bám vào dsRNA của EBOV và không cho \gls{rig-i} phát hiện dsRNA, do \gls{rig-i} phát hiện dsRNA bằng cách liên kết với dsRNA. Theo đó, không có tín hiệu kích hoạt tế bào sản xuất IFN$\alpha / \beta$ và hệ thống miễn dịch không được báo động khi \gls{ebov} phá vỡ thành tế bào và chui ra ngoài\cite{Hartman2004} (Xem hình \ref{fig:rig-i})
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\textwidth,natwidth=610,natheight=642]{RIG-I}
+		\caption{Quá trình VP35 vô hiệu \gls{rig-i} thông qua việc bám vào \gls{dsrna}. Nguồn \cite{Ramanan2011}.}
+		\label{fig:rig-i}
+		\end{figure}
 \subsection{Các phương án ngăn chặn EBOV}
 	Bằng chứng cho thấy những trường hợp được chữa khỏi \gls{evd} có nồng độ Immunoglobulin G (IgG - kháng thể G) và Immunoglobulin T (IgT) cao. Thí nghiệm sử dụng kháng thể trên cơ thể ngựa và chuột đã thành công\cite{Feldmann2003}.
 	
@@ -269,9 +273,11 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 	\label{fig:1dk_3l25}
 	%\end{subfigure}
 	\end{figure}
-	Ngân hàng protein thế giới (Protein Data Bank) lưu trữ các cấu trúc thực nghiệm của VP35. Trong các cấu trúc thực nghiệm thu được, có một cấu trúc của phân tử VP35 chủng Zaire Ebola (\gls{zebov}) nguyên thuỷ gắn với \gls{dsrna} của chính virus này\cite{Leung2010}. Đồng thời, việc đột biến các \gls{residue} thứ 309, 312, 339 đã được xác nhận là làm mất hoàn toàn chức năng gắn vào \gls{dsrna} của VP35\cite{Cardenas2006,Hartman2004}.
+	Ngân hàng cấu trúc protein thế giới (Protein Data Bank) lưu trữ các cấu trúc thực nghiệm của VP35. Trong các cấu trúc thực nghiệm thu được, có một cấu trúc của phân tử VP35 chủng Zaire Ebola (\gls{zebov}) nguyên thuỷ gắn với \gls{dsrna} của chính virus này\cite{Leung2010}. Đồng thời, việc đột biến các \gls{residue} thứ 312, 322, 339 đã được xác nhận là làm mất hoàn toàn chức năng gắn vào \gls{dsrna} của VP35\cite{Cardenas2006,Hartman2004}.
 	
-	Có 9 phân tử nhỏ (ligand) đã được tiên đoán là có khả năng tương tác tốt với VP35 và có tiềm năng trở thành thuốc đặc trị\cite{Brown2014,Dapiaggi2015}. Xem hình \ref{fig:1dk_3l25}. 9 phân tử này có PDBID lần lượt là: 1DK, 12G, 1DL, 11Y, 1D5, 1D6, 1D8, 1D9, 1DE. Các phân tử này can thiệp vào vùng tương tác với nucleoprotein (NP) của \gls{ebov} và gây cản trở quá trình nhân lên của virus trong điều kiện phòng thí nghiệm (\emph{in vitro}).
+	Có 9 phân tử nhỏ (ligand) đã được tiên đoán là có khả năng tương tác tốt với VP35 và có tiềm năng trở thành thuốc đặc trị\cite{Brown2014,Dapiaggi2015} (xem hình \ref{fig:1dk_3l25}). 9 phân tử này có PDBID lần lượt là: 1DK, 12G, 1DL, 11Y, 1D5, 1D6, 1D8, 1D9, 1DE. Các phân tử này can thiệp vào vùng tương tác với nucleoprotein (NP) của \gls{ebov} và gây cản trở quá trình nhân lên của virus trong điều kiện phòng thí nghiệm (\emph{in vitro}).
+	
+	Cho đến nay, chưa có nghiên cứu mô phỏng nào đã được tiến hành để khảo sát tính chất động học của tương tác \gls{dsrna}--VP35 của virus Ebola. Việc khảo sát động học tương tác \gls{dsrna}--VP35 sẽ giúp tìm ra những amino acid nào thực sự quan trọng cho sự gắn kết giữa hai phân tử này. Ngoài ra, có một nghiên cứu mô phỏng để khảo sát các tính chất động học của \gls{dsrna}--VP35 của virus Marburg, một trong số rất ít các virus thuộc họ Filoviridae\cite{Xue2014}.
 	
 	
 
@@ -310,7 +316,7 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 		\caption{Cấu trúc VP35 được khảo sát.}
 		\label{fig:3l25}
 		\end{figure}
-		Tuy nhiên, để khảo sát cấu trúc 3L25, tôi chọn khảo sát cấu hình chỉ gồm chuỗi B và dsRNA (B-conf) vì VP35 tại vị trí này đóng vai trò chính trong việc gắn vào \gls{dsrna}\cite{Kimberlin2010}. Chuỗi B này còn được gọi là chuỗi "end-cap" vì nó chặn đầu của \gls{dsrna}\cite{Leung2010}.
+		Tuy nhiên, để khảo sát cấu trúc 3L25, chúng tôi chọn khảo sát cấu hình chỉ gồm chuỗi B và dsRNA (B-conf) vì VP35 tại vị trí này đóng vai trò chính trong việc gắn vào \gls{dsrna}\cite{Kimberlin2010}. Chuỗi B này còn được gọi là chuỗi "end-cap" vì nó chặn đầu của \gls{dsrna}\cite{Leung2010}.
 %	\subsection{A-conf}
 %	
 %		Gồm chuỗi A và dsRNA. A-conf giúp phân tích tương tác giữa VP35 và dsRNA dọc theo chuỗi (Xem \ref{fig:vp35a}).
@@ -348,7 +354,7 @@ Biết được vòng đời của \gls{ebov}, ta có thể đề ra các hướ
 Mô phỏng động lực học phân tử (Molecular Dynamics - MD) là một phương pháp hữu ích giúp tìm hiểu các tính chất vật lý của hệ phân tử sinh học.
 	\subsection{Ý tưởng chính}
 	
-	Khi khảo sát một hệ nhiều hạt, người ta sử dụng các quy luật thống kê do không thể tìm được lời giải giải tích cho mọi tính chất của hệ. Với điều kiện hệ nhiều hạt này tuân theo giả thiết ergodic, việc khảo sát hệ theo thời gian có thể cho ta bức tranh sơ bộ về không gian phase của hệ.
+	Khi khảo sát một hệ nhiều hạt, người ta sử dụng các quy luật thống kê do việc gần như không thể tìm được lời giải giải tích cho mọi tính chất của hệ. Với điều kiện hệ nhiều hạt này tuân theo giả thiết ergodic, việc khảo sát hệ theo thời gian có thể cho ta bức tranh sơ bộ về không gian pha của hệ.
 	
 	\Gls{md} cho biết quỹ đạo của từng nguyên tử trong hệ một cách cổ điển, tức là xem mỗi nguyên tử là mô hình một "hạt" tuân theo phương trình chuyển động Newton. Sau khi biết được quỹ đạo theo thời gian, các thông số như vận tốc, động năng, nhiệt độ,... sẽ được tính toán gián tiếp.
 	
@@ -359,14 +365,14 @@ Mô phỏng động lực học phân tử (Molecular Dynamics - MD) là một p
 	\item Chuẩn bị hệ: sử dụng tham số vận tốc, toạ độ đã có từ mô phỏng MD trước đó hoặc ngẫu nhiên chọn toạ độ và vận tốc đầu thoả phân bố Boltzmann.
 	\item Tính toán lực tác dụng lên tất cả các nguyên tử, sử dụng trường lực (sẽ trình bày ở phần \ref{amberff}).
 	\item Tích phân các phương trình chuyển động Newton. Thuật toán sử dụng thường là tích phân Verlet được trình bày ở phần \ref{verlet}. Trong bước này, các hiệu chỉnh cần thiết để kiểm soát nhiệt độ, áp suất, liên kết hoá học,... cũng được sử dụng. Khoá luận sẽ trình bày thuật toán kiểm soát nhiệt độ ở phần \ref{v-rescale}. Các phương trình chuyển động cần tính:
-	\begin{align}
+	\begin{eqnarray}
+	\label{force}
 	m a_{i} = & \sum_{i}^{N} F_{i} \\
-	%\label{force}
-	v_{i} = & a_{i}\times dt \\
 	\label{velocity}
+	v_{i} = & a_{i}\times dt \\
 	\vec{x}_{i} = & v_{i}\times dt
-	%\label{coordinate}
-	\end{align}
+	\label{coordinate}
+	\end{eqnarray}
 	\item Sau khi tính tích phân phương trình chuyển động, tính các đại lượng ta quan tâm như năng lượng, áp suất, nhiệt độ,... và ghi kết quả.
 	\end{enumerate}
 	
@@ -429,6 +435,12 @@ Mô phỏng động lực học phân tử (Molecular Dynamics - MD) là một p
 		Các tổng cuối trong phương trình \eqref{ff} là các tổng không liên kết (non-bonded). Các tổng này bao gồm tương tác Van der Waals và tương tác tĩnh điện. Tương tác Van der Waals được mô tả bởi thế Lennard-Jones (6-12) và tương tác tĩnh điện được mô tả bởi thế Coulomb với giả thiết là điện tích điểm nằm tại tâm của nguyên tử \cite{Ponder2003}. Hằng số điện môi $\epsilon$ đặc trưng cho môi trường giữa hai nguyên tử, tham số $B_{ij}$ và $A_{ij}$ là các tham số 6-12 đặc trưng cho từng nguyên tố.
 		
 		Tất cả các hằng số lực, các tham số ứng với tọa độ cân bằng, các tham số 6-12 và hệ số đối xứng $n_{ijkl}$ được dẫn ra từ các tính toán lượng tử với độ chính xác cao và từ thực nghiệm\cite{Ponder2003}.
+		
+		Khi biết được thông tin chi tiết về trường lực, lực tác dụng lên mỗi hạt sẽ được tính theo:
+		\begin{equation}
+		\vec{F}_{i} = -\vec{\nabla} V_{i}
+		\end{equation}
+		Giá trị lực này được dùng để giải phương trình chuyển động \ref{force}.
 
 	\subsection{Thuật toán Verlet sử dụng trong mô phỏng MD}
 	\label{verlet}
@@ -551,7 +563,7 @@ Mô phỏng động lực học phân tử (Molecular Dynamics - MD) là một p
 			
 			Trong thực tế, hệ phân tử mô phỏng thường có khối lượng khác nhau tùy theo nguyên tố. Để chọn được $Q$, cần thiết phải chọn giá trị $Q$ với mỗi nhóm phân tử khác nhau để thời gian mô phỏng là tối thiểu mà hệ vẫn đạt được phân bố chính tắc. Cách chọn Q theo nhóm được trình bày cụ thể hơn trong phần \ref{rcutoff}
 %	\subsection{}
-\section{\glsentryfull{smd}}
+\section{Phương pháp mô phỏng \glsentryfull{smd}}
 Chính là \gls{md} nhưng đặt thế năng phụ thuộc vào thời gian lên các nhóm phân tử xác định để tách các nhóm này ra. Việc tách hai nhóm phân tử ra có tác dụng hỗ trợ kiểm tra giả thiết về chuyển trạng thái của hệ phân tử. Một cách cụ thể, \gls{smd} áp dụng đối với \gls{ligand} và \gls{receptor} sẽ giúp quan sát quá trình hai nhóm phân tử này tách ra khỏi nhau. Đây là một quá trình xảy ra trong thực tế, tuy nhiên cần khảo sát hệ trong thời gian rất dài mới có thể ngẫu nhiên quan sát được quá trình này. Do đó, \gls{smd} được sử dụng với mục đích giảm thiểu thời gian mô phỏng mà vẫn giúp quan sát hệ chuyển trạng thái ra sao.
 
 Có hai cách xác định tham số của thế năng, tương ứng với hai cách "kéo" các nhóm phân tử ra: kéo với lực kéo không đổi hoặc kéo nhóm tách ra với vận tốc không đổi. Đề tài sử dụng phương pháp kéo với vận tốc không đổi\cite{Lu1998}. Trong suốt quá trình kéo, dễ dàng để tính toán lực kéo các nhóm. Từ đó phác thảo được tương tác giữa các nhóm phân tử. Hơn nữa, có thể xác định được độ thay đổi năng lượng khi hệ phân tử chuyển từ trạng thái trước khi kéo sang trạng thái sau khi kéo.
@@ -559,9 +571,7 @@ Có hai cách xác định tham số của thế năng, tương ứng với hai 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bổ sung hình rupture force và các hình SMD từ bài báo của thầy Lý %%%%%%%%%%%%%%%%%%%%
 
 	\subsection{\glsentrytext{smd} sử dụng lực kéo không đổi}
-	
-	Bằng cách cộng thêm lực kéo với độ lớn không đổi vào nhóm các phân tử cần kéo và thực hiện quá trình mô phỏng. Đối với nhóm phân tử không cần kéo, cần cố định một cách tương đối vị trí của chúng, nhằm tránh việc bị kéo theo do tương tác với nhóm phân tử được kéo ra. Thực hiện \gls{smd} nhiều lần với giá trị lực kéo khác nhau giúp xác định lực tương tác giữa hai nhóm phân tử nằm trong khoảng giá trị nào. Qua đó, có thể đánh giá sơ bộ tương tác giữa hai nhóm phân tử (ví dụ \gls{ligand} và \gls{receptor} được nêu ở trên).
-	\begin{wrapfigure}{r}{0.4\textwidth}
+	\begin{wrapfigure}[22]{r}{0.4\textwidth}
 	\vspace{-30pt}
 	\begin{center}
 	\includegraphics[width=0.4\textwidth,natwidth=610,natheight=642]{smd-1}\\
@@ -572,13 +582,15 @@ Có hai cách xác định tham số của thế năng, tương ứng với hai 
 	\caption{Bằng cách di chuyển nhóm liên kết (constraint group) với vận tốc không đổi, lực tác động lên nhóm phân tử cần kéo ra sẽ lớn dần đến một giá trị đủ để tách nhóm đó ra.}
 	\label{fig:smd}
 	\end{wrapfigure}
+	
+	Bằng cách cộng thêm lực kéo với độ lớn không đổi vào nhóm các phân tử cần kéo và thực hiện quá trình mô phỏng. Đối với nhóm phân tử không cần kéo, cần cố định một cách tương đối vị trí của chúng, nhằm tránh việc bị kéo theo do tương tác với nhóm phân tử được kéo ra. Thực hiện \gls{smd} nhiều lần với giá trị lực kéo khác nhau giúp xác định lực tương tác giữa hai nhóm phân tử nằm trong khoảng giá trị nào. Qua đó, có thể đánh giá sơ bộ tương tác giữa hai nhóm phân tử (ví dụ \gls{ligand} và \gls{receptor} được nêu ở trên).
 	\subsection{\glsentrytext{smd} sử dụng vận tốc kéo không đổi}
 	Có thể hình dung về cách kéo nhóm phân tử như hình \ref{fig:smd} được trình bày dưới đây:
 	Thế năng đàn hồi đặt lên nhóm phân tử cần kéo có dạng như sau:
 	\begin{equation}
-	U\left(\vec{r}\right) = \dfrac{1}{2} k\left[ vt - \left( \vec{r}-\vec{r}_{0} \right) \dot\vec{n} \right]^{2}
+	U\left(\vec{r}\right) = \dfrac{1}{2} k\left[ vt - \left( \vec{r}-\vec{r}_{0} \right) \cdot\vec{n} \right]^{2}
 	\end{equation}
-	với $k$ là hệ số đàn hồi, $v=constant$ là tốc độ di chuyển của nhóm liên kết, $\vec{r}$ là vị trí của hạt được kéo và $\vec{r}_{0}$ là vị trí ban đầu của hạt, $\vec{n}$ là hướng kéo.
+	với $k$ là hệ số đàn hồi, $v=constant$ là tốc độ di chuyển của nhóm liên kết, $\vec{r}$ là vị trí của hạt được kéo và $\vec{r}_{0}$ là vị trí ban đầu của hạt, $\vec{n}$ là hướng kéo. Dưới tác dụng của thế đàn hồi, hạt sẽ chịu một lực kéo là $\vec{F} = -\vec{\nabla} U = k\left( \vec{r} - \vec{r}_{0} -\vec{v}\times t\right)$
 	
 	Cách kéo nhóm phân tử này có ưu điểm so với áp dụng lực kéo không đổi là không phải thực hiện rà soát quá nhiều giá trị lực kéo để ước lượng lực tương tác giữa hai nhóm phân tử. Hơn nữa, công trung bình tác dụng lên hệ sẽ tiến đến một giá trị xác định, do nhóm liên kết di chuyển với vận tốc không đổi và công tác dụng lên hệ (một cách tương đối) sẽ bằng năng lượng liên kết giữa hai nhóm và thế năng đàn hồi $U\left( \vec{r}\right) $ trung bình và động năng trung bình của nhóm phân tử kéo. Nói cách khác, hệ sẽ ít bị can thiệp một cách "thô bạo" hơn so với cách kéo sử dụng lực không đổi được trình bày ở trên.
 \section{Tham số sử dụng trong các quá trình mô phỏng}
@@ -600,7 +612,7 @@ Các thông số bán kính chặt cụt và phương pháp tính tương tác C
 \subsubsection{Cân bằng đẳng nhiệt - đẳng tích (NPT)}
 Các thông số vẫn tương tự như trên. Để ổn định áp suất của hệ tại $1 \left(bar\right)$, sử dụng phương pháp Parrinello-Rahman với $\tau_{p}=2\left(ps\right)$, hằng số nén $\beta=-\frac{1}{V}\frac{\partial V}{\partial p} = 4.5\times 10^{-5}\left(bar^{-1}\right)$. Thời gian mô phỏng bước cân bằng NPT là $100\left(ps\right)$.
 \subsubsection{\glsentrytext{smd}}
-Bán kính chặt cụt được sử dụng trong bước này là $1.4\left(nm\right)$. Tốc độ di chuyển của nhóm liên kết (constraint group) bằng $5\left(nm/ns\right)$. Lực sử dụng để kéo là $1000\ \left( kJ . mol^ {-1} nm^ {-2} \right)$.
+Bán kính chặt cụt được sử dụng trong bước này là $1.4\left(nm\right)$. Tốc độ kéo của nhóm liên kết (constraint group) bằng $5\left(nm/ns\right)$. Hệ số đàn hồi (độ cứng) được sử dụng để kéo là $k = 1000\ \left( kJ . mol^ {-1} nm^ {-2} \right)$.
 \section{Các công cụ phân tích kết quả}
 	\subsection{Lực kéo tối đa}
 	%%%%%%%%%% Insert Rupture force figure here %%%%%%%%%%%%%%%%%%%%%%%
@@ -610,7 +622,7 @@ Bán kính chặt cụt được sử dụng trong bước này là $1.4\left(nm
 	\caption{\textbf{(A)} kéo ligand ra khỏi protein bằng cách đặt một thế năng điều hoà thay đổi theo thời gian, tương đương với việc đặt một lực kéo của một lò xo với hệ số đàn hồi \textit{k} lên ligand. \textbf{(B)} Đường biểu diễn lực kéo theo toạ độ. Lực kéo tối đa $F_{max}$ đặc trưng cho ái lực liên kết giữa ligand và protein. Nguồn \cite{SuanLi2012}}
 	\label{fig:rupture-force}
 	\end{figure}
-	Là lực lớn nhất dùng để kéo hai phân tử ra trong suốt quá trình mô phỏng. Do hệ phân tử đã ở vị trí ứng với đáy của giếng thế địa phương, nên để tách hai nhóm phân tử protein và \gls{dsrna} ra thì lực dùng để tách hai nhóm ra sẽ lớn dần đến một giá trị mà tại đó hai nhóm không còn tương tác đáng kể với nhau nữa.
+	Là lực lớn nhất dùng để kéo hai phân tử ra trong suốt quá trình mô phỏng. Do hệ phân tử đã ở vị trí ứng với đáy của giếng thế địa phương, nên để tách hai nhóm phân tử protein và \gls{dsrna} ra thì lực dùng để tách hai nhóm ra sẽ lớn dần đến một giá trị mà tại đó hai nhóm không còn tương tác đáng kể với nhau nữa (Xem hình \ref{fig:rupture-force}).
 	Việc so sánh lực kéo tối đa giữa các nhóm phân tử giúp đánh giá tương đối tương tác giữa các nhóm phân tử này. Điều này đặc biệt có ý nghĩa khi so sánh lực kéo các cấu hình đột biến một \gls{residue} để tìm hiểu vai trò của nó trong tương tác giữa các nhóm.
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bổ sung hình Rupture force ở đây %%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{figure}[h!]
@@ -619,6 +631,7 @@ Bán kính chặt cụt được sử dụng trong bước này là $1.4\left(nm
 	\caption{Đồ thị tương quan giữa lực kéo tối đa (Rupture Force) và năng lượng tương tác giữa phân tử R-125489 với thụ thể NA của virus cúm và giữa phân tử CS-8959 với thụ thể NA của virus cúm \cite{SuanLi2012}. Hệ số tương quan (correlation level) R = 0.97}
 	\label{fig:rupture-force-delta-g}
 	\end{figure}
+	Quan sát đồ thị \ref{fig:rupture-force-delta-g} có thể thấy mối tương quan giữa lực kéo tối đa để tách hai nhóm phân tử và năng lượng tương tác giữa hai nhóm phân tử. Đường biểu diễn gần đúng cho thấy năng lượng tương tác giữa hai nhóm phân tử tỷ lệ tuyến tính với lực kéo tối đa để tách hai nhóm phân tử này. Như vậy, việc khảo sát lực kéo tối đa giữa các phân tử VP35 không đột biến và VP35 đột biến ở các \gls{residue} xác định với \gls{dsrna} giúp so sánh tốt năng lượng liên kết của VP35 không đột biến và VP35 đột biến với \gls{dsrna}.
 	\subsection{Thế năng tương tác theo thời gian}
 	
 	Từ các tham số toạ độ và từ \gls{amber} đã được định nghĩa, có thể dễ dàng tính lại được đóng góp của tương tác Coulomb hoặc tương tác Van der Waals vào tương tác của một \gls{residue}. Điều này giúp đánh giá một cách tương đối vai trò của các \gls{residue}, đồng thời giúp dự đoán các amino acid có khả năng đóng góp cho tương tác giữa \gls{dsrna} và VP35.
@@ -798,7 +811,12 @@ Cụ thể, các \gls{residue} nổi bật với tỉ lệ tạo liên kết Hyd
 \end{figure}
 
 \section{So sánh lực kéo}
-
+Để khảo sát vai trò của các \gls{residue} có thế năng tương tác lớn và tạo liên kết Hydro với \gls{dsrna}, chúng tôi tiến hành mô phỏng \gls{smd} cho các hệ đột biến và so sánh lực kéo tối đa so với trường hợp không đột biến. Vì lý do thời gian thực hiện khoá luận ngắn nên chúng tôi tiến hành mô phỏng cho 3 hệ đột biến các \gls{residue}:
+\begin{itemize}
+\item \gls{R312A} (PDBID: 3L27).
+\item \gls{K339A} (PDBID: 3L28).
+\item Lys282Ala.
+\end{itemize}
 Quan sát hình \ref{pullft} dễ dàng nhận thấy rằng lực kéo tối đa dùng để tách dsRNA với phân tử không đột biến VP35 là lớn nhất. Điều này phù hợp với kết quả thực nghiệm\cite{Leung2010}. Cũng từ kết quả thu được, lực kéo tối đa dùng để kéo phân tử VP35 đột biến tại Arg312 (\gls{R312A} - cấu hình 3L27) thấp hơn hẳn so với lực kéo phân tử không đột biến, điều này cho thấy tầm quan trọng của amino acid tại vị trí này trong tương tác dsRNA-VP35.
 	\begin{figure}[t!]
 	\centering
@@ -820,7 +838,7 @@ Tương tự với cấu hình 3L28 (đột biến amino acid 339 từ Lysine sa
 \section{Đột biến Lys282Ala}
 Từ dữ liệu thu được trong quá trình mô phỏng các cấu hình không đột biến và đột biến, đề tài phát triển thêm một bước ở việc dự đoán amino acid Arginine thứ 282 cũng đóng vai trò quan trọng trong tương tác dsRNA-VP35 dựa trên các quan sát sau:
 \begin{itemize}
-\item Lys282 là phân tử Arginine mang điện tích, vì vậy nó có thể đóng góp cho tương tác giữa hai nhóm phân tử trong tương tác tĩnh điện. Hơn nữa, kết quả phân tích thế năng cho thấy Lys282 đóng góp nhiều vào tương tác \gls{dsrna}--VP35 (xem hình \ref{fig:282}). Độ thay đổi thế năng tương tác giữa Lys282 với \gls{dsrna} (trên $140kJ/mol$) lớn hơn so với độ thay đổi thế năng tương tác giữa Arg312 với \gls{dsrna} (khoảng $140kJ/mol$). Thực nghiệm cho thấy đột biến Arg312Ala làm mất hoàn toàn khả năng gắn vào \gls{dsrna} của VP35.
+\item Lys282 là phân tử Lysine mang điện tích, vì vậy nó có thể đóng góp cho tương tác giữa hai nhóm phân tử trong tương tác tĩnh điện. Hơn nữa, kết quả phân tích thế năng cho thấy Lys282 đóng góp nhiều vào tương tác \gls{dsrna}--VP35 (xem hình \ref{fig:282}). Độ thay đổi thế năng tương tác giữa Lys282 với \gls{dsrna} (trên $140kJ/mol$) lớn hơn so với độ thay đổi thế năng tương tác giữa Arg312 với \gls{dsrna} (khoảng $140kJ/mol$). Thực nghiệm cho thấy đột biến Arg312Ala làm mất hoàn toàn khả năng gắn vào \gls{dsrna} của VP35.
 \item Lys282 là một trong những amino acid tạo liên kết Hydro mạnh trong cả 3 lần mô phỏng \gls{smd} (xem hình \ref{fig:hbond3L25_pull1},\ref{fig:hbond3L25_pull2},\ref{fig:hbond3L25_pull3}). Cụ thể, Lys282 luôn tạo liên kết Hydro ở mức 100\% trong suốt thời gian VP35 vẫn còn tương tác với \gls{dsrna}.
 \end{itemize}
 Để đánh giá kết quả tiên đoán, đường biểu diễn lực kéo trung bình cấu hình đột biến Lys282 cho thấy lực kéo tối đa của phân tử này thấp hơn so với phân tử không đột biến và tương đối xấp xỉ với lực kéo tối đa cho cấu hình đột biến 3L28 (đột biến Lys339Ala) có được từ thực nghiệm. Như vậy, Lys282 có thể là một trong những amino acid chính đóng góp vào tương tác dsRNA-VP35. Việc đột biến phân tử này gây ảnh hưởng lên tương tác dsRNA-VP35 một cách rõ rệt.
@@ -864,14 +882,13 @@ Từ dữ liệu thu được trong quá trình mô phỏng các cấu hình kh�
 \chapter{Kết luận và hướng phát triển tiếp theo của đề tài}
 
 	
-	
-	Khóa luận được thực hiện trong thời gian ngắn và đạt được những kết quả về vai trò của các amino acid Arg312 và Lys339 phù hợp với kết quả trong thực nghiệm, đồng thời dự đoán amino acid đóng góp vào tương tác giữa dsRNA-VP35.
+	Bằng phương pháp mô phỏng \gls{smd} cùng với các phân tích về thế năng tương tác, liên kết Hydro và lực kéo tối đa, khoá luận đã chỉ ra được vai trò của các amino acid Arg312 và Lys339. Kết quả này phù hợp với kết quả trong thực nghiệm, đồng thời dự đoán amino acid đóng góp vào tương tác giữa dsRNA-VP35.
 
 	Kết quả thu được từ khóa luận đem lại gợi ý cho việc phát triển các phân tử có thể tác động vào các amino acid đóng góp vào tương tác dsRNA--VP35. Đồng thời gợi ý amino acid Lys282 đóng vai trò quan trọng trong tương tác \gls{dsrna}--VP35.
 	
 	Tuy nhiên, đề tài cần được thực hiện thêm quá trình mô phỏng động học thời gian dài để quan sát các trạng thái khác nhau của hệ phân tử, qua đó đánh giá chính xác hơn các amino acid đóng góp chủ yếu cho tương tác dsRNA--VP35.
 	
-	Hướng phát triển tiếp theo của đề tài sẽ là:
+	Hướng phát triển tiếp theo của đề tài:
 	\begin{itemize}
 	\item Khảo sát phân tử VP35 đột biến Arg322Ala để kiểm tra giả thiết ở phần \ref{potential} và \ref{hbond-result}.
 	\item Tiên đoán các phân tử có khả năng gắn vào khu vực tương tác dsRNA-VP35, theo đó gợi ý phân tử thuốc có khả năng bất hoạt VP35.

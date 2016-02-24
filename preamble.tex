@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Huong dan su dung compiler %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Latex > biber > latex > makeglossary > latex > makeindex > latex > pdflatex > view-pdf%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper,reqno, oneside]{book}
+\makeindex
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath, amsthm, amssymb,latexsym,amscd,amsfonts,enumerate}
+\usepackage[backend=biber,style=numeric,sorting=ynt,hyperref=auto,doi=true]{biblatex}
+\addbibresource{thesis.bib}
+\usepackage{stdclsdv}
+\usepackage[]{tocbibind}
+\usepackage[titletoc]{appendix}
+\usepackage[hidelinks]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% trang tri %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.25in}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{color, fancyhdr, graphicx, wrapfig}
+\usepackage{epstopdf}
+
+\pagenumbering{roman}\pagestyle{plain}
+\pagestyle{fancy}
+\lhead{\it Tương tác lực giữa phân tử VP35 và dsRNA của virus Ebola}
+\rhead{\it }
+\lfoot{\it Nguyễn Hữu Quý Ngân} 			         
+\rfoot{\it Theoretical Physic - HCMUS}
+\renewcommand{\headrulewidth}{1,2pt} 			
+\renewcommand{\footrulewidth}{1,2pt}   % Cái này là tiêu đề chạy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Figures and Table %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{afterpage, caption, subcaption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tu dien viet tat %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{glossaries}
+\makeglossaries
+\setacronymstyle{long-short}
+\newacronym{ebov}{EBOV}{virus Ebola}
+\newacronym{zebov}{ZEBOV}{Zaire Ebola}
+\newacronym{evd}{EVD}{Bệnh Ebola - Ebola Virus Disease -}
+\newglossaryentry{ligand}
+{
+name={phối tử},
+description={ligand là một (hoặc một nhóm) phân tử có khả năng gắn vào một nhóm phân tử khác để tạo nên phức hợp với chức năng riêng biệt.}}
+\newglossaryentry{receptor}
+{
+name={thụ thể},
+description={receptor là phân tử nằm ở màng tế bào có chức năng thu nhận tín hiệu hóa học cho tế bào đó.}}
+\newglossaryentry{R312A}
+{
+name={R312A},
+description={Đột biến amino acid Arginine ở vị trí thứ 312 thành Alanine.}}
+\newglossaryentry{K339A}
+{
+name={K339A},
+description={Đột biến amino acid Lysine ở vị trí thứ 339 thành Alanine.}}
+\newglossaryentry{K282A}
+{
+name={K282A},
+description={Đột biến amino acid Lysine ở vị trí thứ 282 thành Alanine.}}
+\newacronym{ehf}{EHF}{Sốt xuất huyết Ebola - Ebola Hemmohaegic Fever -}
+\newacronym{md}{MD}{phương pháp động học phân tử - Molecular dynamics -}
+\newacronym{smd}{SMD}{Steered Molecular Dynamcs}
+\newacronym{dsrna}{dsRNA}{chuỗi kép RNA - double-strain RNA -}
+\newacronym{iid}{IID}{Interferon Inhibitor Domain}
+\newacronym{meta}{metadynamics}{metadynamcis}
+\newacronym{amber}{amber99sb ff}{trường lực AMBER99SB}
+\newacronym{gp}{GP}{Glycoprotein}
+\newglossaryentry{ifn}
+{
+name={IFN},
+description={Interferon (IFN) là một nhóm các protein tự nhiên được sản xuất bởi các tế bào của hệ miễn dịch ở hầu hết các động vật nhằm chống lại các tác nhân ngoại lai như virus, vi khuẩn, kí sinh trùng và tế bào ung thư.\cite{DeAndrea2002}},
+%other options
+}
+\newacronym{np}{NP}{Nucleoprotein}
+\newglossaryentry{rig-i}
+{
+name={RIG-I},
+description={retinoic acid-inducible gene 1 là một loại enzym có chức năng phát hiện chuỗi vật chất di truyền của các virus cúm A, virus Sendai, họ flavivirus (virus sốt xuất huyết, viêm não Nhật Bản,...). Tuy nhiên RIG-I không phát hiện được retrovirus hay virus có vật chất di truyền là DNA.\cite{Kato2008}},
+%other options
+}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+\chapter{Kết luận và hướng phát triển tiếp theo của đề tài}
+\hspace{18pt}
+	
+	
+	Khóa luận được thực hiện trong thời gian ngắn và đạt được những kết quả phù hợp với thực nghiệm, đồng thời dự đoán amino acid đóng góp vào tương tác giữa dsRNA-VP35.\\ 
+	Kết quả thu được từ khóa luận đem lại gợi ý cho việc phát triển các phân tử có thể tấn công vào các amino acid đóng góp vào tương tác dsRNA-VP35.\\
+	Tuy nhiên, đề tài cần được thực hiện thêm quá trình mô phỏng động học thời gian dài để quan sát các trạng thái khác nhau của hệ phân tử, qua đó đánh giá chính xác hơn các amino acid đóng góp chủ yếu cho tương tác dsRNA-VP35.\\
+	Hướng phát triển tiếp theo của đề tài sẽ là:
+	\begin{itemize}
+	\item Đánh giá và tiên đoán dựa trên mô phỏng động học phân tử nhằm tìm ra các amino acid đóng góp cho tương tác dsRNA-VP35.
+	\item Tiên đoán các phân tử có khả năng gắn vào khu vực tương tác dsRNA-VP35, theo đó gợi ý phân tử thuốc có khả năng bất hoạt VP35.
+	\end{itemize}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%+ Ket thuc Chuong 4.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%     Bibliography    %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                     %%%%%%%%%%%%%%%%%%%%%%%
+%\nocite{*}
+\printbibliography
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+\clearpage
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%     Appendice       %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                     %%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\addcontentsline{chapter}{Phụ lục}
+\clearpage
+\newpage
+\input{phuluc}

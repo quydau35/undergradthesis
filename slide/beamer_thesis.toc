@@ -1,0 +1,31 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@endinputifotherversion {3.36pt}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{T\IeC {\h \OCIRCUMFLEX }NG QUAN}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{1}{B\IeC {\d \ecircumflex }nh g\IeC {\^a}y b\IeC {\h \ohorn }i virus Ebola (EBOV)}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{2}{C\IeC {\ohorn } ch\IeC {\'\ecircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a EBOV - Ph\IeC {\uhorn }\IeC {\ohorn }ng \IeC {\'a}n ng\IeC {\u a}n ch\IeC {\d \abreve }n}{4}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{3}{C\IeC {\'a}c nghi\IeC {\^e}n c\IeC {\'\uhorn }u tr\IeC {\^e}n th\IeC {\'\ecircumflex } gi\IeC {\'\ohorn }i v\IeC {\`\ecircumflex } VP35}{5}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{\IeC {\DJ }\IeC {\'\OCIRCUMFLEX }I T\IeC {\UHORN }\IeC {\d \OHORN }NG - PH\IeC {\UHORN }\IeC {\OHORN }NG PH\IeC {\'A}P NGHI\IeC {\^E}N C\IeC {\'\UHORN }U}{6}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{1}{C\IeC {\'\acircumflex }u tr\IeC {\'u}c 3L25 - B-conf}{6}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{2}{Ph\IeC {\uhorn }\IeC {\ohorn }ng ph\IeC {\'a}p M\IeC {\^o} ph\IeC {\h o}ng \IeC {\DJ }\IeC {\d \ocircumflex }ng h\IeC {\d o}c ph\IeC {\^a}n t\IeC {\h \uhorn } (MD)- Steered Molecular Dynamics (SMD)}{7}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{K\IeC {\'\ECIRCUMFLEX }T QU\IeC {\h A} - TH\IeC {\h A}O LU\IeC {\d \ACIRCUMFLEX }N}{9}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{1}{Thi\IeC {\'\ecircumflex }t l\IeC {\d \acircumflex }p h\IeC {\d \ecircumflex } m\IeC {\^o} ph\IeC {\h o}ng}{9}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{2}{Th\IeC {\'\ecircumflex } n\IeC {\u a}ng c\IeC {\h u}a t\IeC {\`\uhorn }ng v\IeC {\d i} tr\IeC {\'\i } amino acid v\IeC {\'\ohorn }i dsRNA}{10}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{3}{Li\IeC {\^e}n k\IeC {\'\ecircumflex }t Hydro gi\IeC {\~\uhorn }a c\IeC {\'a}c v\IeC {\d i} tr\IeC {\'\i } amino acid v\IeC {\'\ohorn }i dsRNA}{11}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{4}{L\IeC {\d \uhorn }c k\IeC {\'e}o s\IeC {\h \uhorn } d\IeC {\d u}ng \IeC {\dj }\IeC {\h \ecircumflex } t\IeC {\'a}ch VP35 v\IeC {\`a} dsRNA}{12}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{5}{\IeC {\DJ }\IeC {\d \ocircumflex }t bi\IeC {\'\ecircumflex }n K282A}{14}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{H\IeC {\UHORN }\IeC {\'\OHORN }NG PH\IeC {\'A}T TRI\IeC {\h \ECIRCUMFLEX }N}{15}{0}{4}
